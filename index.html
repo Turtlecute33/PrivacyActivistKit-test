@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Privacy Activist Kit</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="description" content="A guide for activists on digital self-defense.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+    <style>
+        :root {
+            --base-font-size: 16px;
+        }
+
+        body {
+            font-size: var(--base-font-size);
+        }
+
+        /* Increase font size for larger screens */
+        @media screen and (min-width: 768px) {
+            :root {
+                --base-font-size: 18px;
+            }
+        }
+
+        /* Further increase font size for very large screens */
+        @media screen and (min-width: 1200px) {
+            :root {
+                --base-font-size: 20px;
+            }
+        }
+
+        .sidebar-nav {
+            /* Make sidebar font slightly larger than the main content */
+            font-size: calc(var(--base-font-size) + 1px);
+        }
+
+        .next-section-button {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 9999px; /* pill shape */
+            background-color: #42b983; /* Vue.js green, matches the theme */
+            color: white !important; /* Important to override default link colors */
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.2s;
+            float: right; /* Align to the right */
+            margin-top: 20px;
+        }
+
+        .next-section-button:hover {
+            background-color: #36a372; /* A slightly darker green for hover */
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app"></div>
+    <script>
+        window.$docsify = {
+            name: 'Privacy Activist Kit',
+            coverpage: true,
+            loadSidebar: true,
+            subMaxLevel: 1,
+            alias: {
+                '/.*/_sidebar.md': '/_sidebar.md'
+            }
+        }
+    </script>
+    <!-- Docsify v4 -->
+    <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+</body>
+
+</html>
