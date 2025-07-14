@@ -9,6 +9,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
     <style>
+        html, body {
+            min-height: 100%;
+        }
+
         :root {
             --base-font-size: 16px;
         }
@@ -36,6 +40,13 @@
             font-size: calc(var(--base-font-size) + 1px);
         }
 
+        .next-section-button-container {
+            content: "";
+            display: table;
+            clear: both;
+            margin-bottom: 40px; /* Add safe space at the bottom */
+        }
+
         .next-section-button {
             display: inline-block;
             padding: 12px 24px;
@@ -52,6 +63,31 @@
         .next-section-button:hover {
             background-color: #36a372; /* A slightly darker green for hover */
             transform: translateY(-2px);
+        }
+
+        /* --- Hamburger Menu Fixes --- */
+        .sidebar-toggle {
+            top: 0; /* Move to top */
+            left: 0; /* Move to left */
+            bottom: auto; /* Reset bottom position */
+            width: 40px;
+            height: 40px;
+            padding: 8px;
+            margin: 10px;
+            border-radius: 50%; /* Make it circular */
+            background-color: #42b983; /* Fully opaque theme color */
+            border: 1px solid #36a372;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.25); /* Stronger shadow */
+            z-index: 99; /* Ensure it's on top of other content */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .sidebar-toggle span {
+            background-color: white; /* Make the lines white and thicker */
+            height: 3px;
         }
     </style>
 </head>
