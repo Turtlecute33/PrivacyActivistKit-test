@@ -67,27 +67,63 @@
 
         /* --- Hamburger Menu Fixes --- */
         .sidebar-toggle {
-            top: 0; /* Move to top */
-            left: 0; /* Move to left */
+            top: 0 !important; /* Move to top */
+            left: 0 !important; /* Move to left */
             bottom: auto; /* Reset bottom position */
-            width: 40px;
-            height: 40px;
-            padding: 8px;
+            width: 40px !important;
+            height: 40px !important;
+            padding: 8px; /* Re-added padding */
             margin: 10px;
             border-radius: 50%; /* Make it circular */
             background-color: #42b983; /* Fully opaque theme color */
             border: 1px solid #36a372;
             box-shadow: 0 4px 12px rgba(0,0,0,0.25); /* Stronger shadow */
-            z-index: 99; /* Ensure it's on top of other content */
+            z-index: 99 !important; /* Ensure it's on top of other content */
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            box-sizing: border-box; /* Ensure padding is included in the 40x40 size */
+            position: fixed !important; /* Ensure it stays fixed */
+            overflow: hidden; /* Hide overflowing content */
         }
 
         .sidebar-toggle span {
-            background-color: white; /* Make the lines white and thicker */
-            height: 3px;
+            display: block; /* Ensure it takes up its own line */
+            width: 18px; /* Further reduced width for the lines */
+            height: 3px; /* Fixed height for the lines */
+            background-color: white; /* Make the lines white */
+            border-radius: 2px; /* Slightly rounded ends for the lines */
+            transition: all 0.3s ease-in-out; /* Smooth transition for animations */
+            flex-shrink: 0; /* Prevent lines from shrinking */
+            line-height: 0; /* Remove extra vertical space */
+            position: relative; /* Ensure proper stacking context */
+            z-index: 1; /* Ensure it's above other potential elements */
+        }
+
+        .sidebar-toggle span + span {
+            margin-top: 3px; /* Slightly reduced space between the lines */
+        }
+
+        /* Ensure the sidebar toggle remains its original size when expanded (Docsify adds 'close' class) */
+        .sidebar-toggle.close {
+            width: 40px !important;
+            height: 40px !important;
+            transform: none !important; /* Reset any transform that might be applied */
+        }
+
+        /* Specific mobile adjustments for the sidebar toggle */
+        @media screen and (max-width: 768px) {
+            .sidebar-toggle {
+                width: 40px !important;
+                height: 40px !important;
+                min-width: 40px !important;
+                max-width: 40px !important;
+                position: fixed !important;
+                top: 0 !important;
+                left: 0 !important;
+                z-index: 99 !important;
+            }
         }
     </style>
 </head>
