@@ -47,19 +47,12 @@ This kit was created with a few core beliefs:
 
 ## ✏️ Contributing
 
-Want to help? You don’t need to be a developer.
+Want to support this project? You don’t need to write code — leaving a ⭐, sharing it with others, or spreading the word on social media helps a lot.
 
-Ways to contribute:
+We welcome all contributions, especially from first-timers and those making small improvements. For full details, check out [`CONTRIBUTING.md`](https://github.com/Turtlecute33/PrivacyActivistKit/blob/main/CONTRIBUTING.md) (coming soon).
 
-- Star ⭐ this repo  
-- Fix typos, add tools, suggest ideas  
-- Translate a guide  
-- Report bugs or outdated links  
-- Share it with your community  
+Have an idea or suggestion? [Open an issue](https://github.com/Turtlecute33/PrivacyActivistKit/issues) or [submit a pull request](https://github.com/Turtlecute33/PrivacyActivistKit/pulls).
 
-We love small contributions and first-time contributors. See `CONTRIBUTING.md` [coming soon] for more info.
-
-Have an idea? [Open an issue](https://github.com/your-repo/issues) or [send a PR](https://github.com/your-repo/pulls)
 
 ---
 
