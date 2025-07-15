@@ -1,7 +1,8 @@
 # 🕊️ Privacy Activist Kit — Your Friendly Toolkit for Online Privacy & Activism
 
 Welcome to the official repository of **[PrivacyActivistKit.org](https://privacyactivistkit.org/#/)**  
-A website lovingly crafted to empower privacy-conscious humans, grassroots activists, educators, and curious minds alike with the tools, knowledge, and resources to take control of their digital lives. 🌐💪
+
+A website lovingly crafted to empower privacy-conscious humans, grassroots activists, educators, and curious minds alike with the tools, knowledge, and resources to take control of their digital lives 🌐💪
 
 Whether you're just getting started with privacy or you're the go-to person in your friend group for "which VPN should I use?" — this kit is made for you. It's simple, beautiful, and fully open-source. And you’re very welcome here! 🎉
 
@@ -26,7 +27,7 @@ You’ll find:
 ## 🖥️ Live Website
 
 🌍 Visit the site here: **[https://privacyactivistkit.org/#/](https://privacyactivistkit.org/#/)**  
-It’s 100% free to use, no tracking, no creepy analytics. Just good, clean, empowering information.
+It’s 100% free to use, no tracking, no creepy analytics.
 
 ---
 
@@ -66,7 +67,7 @@ Each entry includes:
 - Use cases and who it's for  
 - Links to explore further  
 
-### 📚 Guides & Learning
+### 📚 Guides & Learning [TBD]
 
 Got a few minutes? Learn things like:
 
@@ -78,7 +79,7 @@ Got a few minutes? Learn things like:
 
 Designed to be printable, workshop-friendly, and beginner-safe!
 
-### 🛡️ Activist Resources
+### 🛡️ Activist Resources [TBD]
 
 - Digital security checklists  
 - Burner phone tips  
@@ -86,7 +87,7 @@ Designed to be printable, workshop-friendly, and beginner-safe!
 - “Do I need a VPN?” flowcharts  
 - Emergency prep for organizers  
 
-### 📎 Shareables
+### 📎 Shareables [TBD]
 
 - Posters and flyers  
 - Slide decks for trainers  
@@ -113,7 +114,7 @@ All levels welcome. No code required! You can also contribute via:
 - Sharing the site with others  
 - Reporting bugs or outdated info  
 
-Check the [`CONTRIBUTING.md`](CONTRIBUTING.md) file (if applicable) for more specifics.
+Check the [`CONTRIBUTING.md`](CONTRIBUTING.md) [TBD] file (if applicable) for more specifics.
 
 ---
 
@@ -121,12 +122,10 @@ Check the [`CONTRIBUTING.md`](CONTRIBUTING.md) file (if applicable) for more spe
 
 This site is made using:
 
-- **Vue.js** for a cozy, reactive frontend  
+- **Docsify** for a cozy, reactive frontend  
 - **Markdown**-based content for easy editing  
 - **GitHub Pages** for deployment  
 - **No cookies**, no trackers, no nonsense  
-
-Made with a cup of tea and a warm hoodie. ☕🧥
 
 ---
 
@@ -143,7 +142,7 @@ If you're reading this, thank *you* too 💛
 
 ---
 
-## ☁️ Roadmap & Dreams
+## ☁️ Roadmap & Dreams [TBD]
 
 Here are some magical things we might build next:
 
@@ -173,8 +172,7 @@ This means:
 
 Have a question or want to connect?
 
-- 🐘 Mastodon: [@privacykit@yourserver.social](https://yourserver.social)  
-- 📧 Email: contact@privacyactivistkit.org  
+- 📧 Email: [TBD] 
 - 🗣️ GitHub Issues: For bugs, ideas, or high-fives  
 
 ---
