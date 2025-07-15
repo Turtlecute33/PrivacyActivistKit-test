@@ -7,7 +7,7 @@ This site was built for people who care about privacy, justice, and digital auto
 Clear, practical resources to help you take control of your digital life without the corporate fluff.
 
 
-## 🌟 What is it?
+## What is it?
 
 The **Privacy Activist Kit** is a free, open-source hub of privacy tools, how-to guides, teaching materials, and simple explanations designed to support activists, organizers, educators, students, curious beginners, and anyone tired of being tracked online.
 
@@ -19,7 +19,7 @@ You’ll find:
 - 🧩 Clear, no-jargon explanations  
 
 
-## 🧠 Why We Made This
+## Why We Made This
 
 > “Privacy is a right, not a luxury.”
 
@@ -33,7 +33,7 @@ This kit was created with a few core beliefs:
 - ❤️ **It should be independent** — No ads, no sponsors, no strings  
 
 
-## 🧰 What's Inside
+## What's Inside
 
 - Privacy Tools: Curated list of secure browsers, messaging apps, email services, search engines, VPNs, Tor tools, and file sharing platforms.
 - Guides (Coming Soon): Easy-to-understand, printable lessons on encryption, metadata, threat modeling, protest safety, and more.
@@ -41,7 +41,7 @@ This kit was created with a few core beliefs:
 - Shareables (Coming Soon): Posters, zines, slides, and social media visuals for easy, engaging knowledge-sharing.
 
 
-## ✏️ Contributing
+## Contributing
 
 Want to support this project? You don’t need to write code — leaving a ⭐, sharing it with others, or spreading the word on social media helps a lot.
 
@@ -50,7 +50,7 @@ We welcome all contributions, especially from first-timers and those making smal
 Have an idea or suggestion? [Open an issue](https://github.com/Turtlecute33/PrivacyActivistKit/issues) or [submit a pull request](https://github.com/Turtlecute33/PrivacyActivistKit/pulls).
 
 
-## 📜 License
+## License
 
 Creative Commons Attribution-NonCommercial 4.0  
 [Read it here](https://creativecommons.org/licenses/by-nc/4.0/)
