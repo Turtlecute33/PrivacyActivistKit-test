@@ -9,7 +9,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
     <style>
-        html, body {
+        html,
+        body {
             min-height: 100%;
         }
 
@@ -44,72 +45,101 @@
             content: "";
             display: table;
             clear: both;
-            margin-bottom: 40px; /* Add safe space at the bottom */
+            margin-bottom: 40px;
+            /* Add safe space at the bottom */
         }
 
         .next-section-button {
             display: inline-block;
             padding: 12px 24px;
-            border-radius: 9999px; /* pill shape */
-            background-color: #42b983; /* Vue.js green, matches the theme */
-            color: white !important; /* Important to override default link colors */
+            border-radius: 9999px;
+            /* pill shape */
+            background-color: #42b983;
+            /* Vue.js green, matches the theme */
+            color: white !important;
+            /* Important to override default link colors */
             text-decoration: none;
             font-weight: bold;
             transition: background-color 0.3s, transform 0.2s;
-            float: right; /* Align to the right */
+            float: right;
+            /* Align to the right */
             margin-top: 20px;
         }
 
         .next-section-button:hover {
-            background-color: #36a372; /* A slightly darker green for hover */
+            background-color: #36a372;
+            /* A slightly darker green for hover */
             transform: translateY(-2px);
         }
 
         /* --- Hamburger Menu Fixes --- */
         .sidebar-toggle {
-            top: 0 !important; /* Move to top */
-            left: 0 !important; /* Move to left */
-            bottom: auto; /* Reset bottom position */
+            top: 0 !important;
+            /* Move to top */
+            left: 0 !important;
+            /* Move to left */
+            bottom: auto;
+            /* Reset bottom position */
             width: 40px !important;
             height: 40px !important;
-            padding: 8px; /* Re-added padding */
+            padding: 8px;
+            /* Re-added padding */
             margin: 10px;
-            border-radius: 50%; /* Make it circular */
-            background-color: #42b983; /* Fully opaque theme color */
+            border-radius: 50%;
+            /* Make it circular */
+            background-color: #42b983;
+            /* Fully opaque theme color */
             border: 1px solid #36a372;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.25); /* Stronger shadow */
-            z-index: 99 !important; /* Ensure it's on top of other content */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+            /* Stronger shadow */
+            z-index: 99 !important;
+            /* Ensure it's on top of other content */
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            box-sizing: border-box; /* Ensure padding is included in the 40x40 size */
-            position: fixed !important; /* Ensure it stays fixed */
-            overflow: hidden; /* Hide overflowing content */
+            box-sizing: border-box;
+            /* Ensure padding is included in the 40x40 size */
+            position: fixed !important;
+            /* Ensure it stays fixed */
+            overflow: hidden;
+            /* Hide overflowing content */
         }
 
         .sidebar-toggle span {
-            display: block; /* Ensure it takes up its own line */
-            width: 18px; /* Further reduced width for the lines */
-            height: 3px; /* Fixed height for the lines */
-            background-color: white; /* Make the lines white */
-            border-radius: 2px; /* Slightly rounded ends for the lines */
-            transition: all 0.3s ease-in-out; /* Smooth transition for animations */
-            flex-shrink: 0; /* Prevent lines from shrinking */
-            line-height: 0; /* Remove extra vertical space */
-            position: relative; /* Ensure proper stacking context */
-            z-index: 1; /* Ensure it's above other potential elements */
+            display: block;
+            /* Ensure it takes up its own line */
+            width: 18px;
+            /* Further reduced width for the lines */
+            height: 3px;
+            /* Fixed height for the lines */
+            background-color: white;
+            /* Make the lines white */
+            border-radius: 2px;
+            /* Slightly rounded ends for the lines */
+            transition: all 0.3s ease-in-out;
+            /* Smooth transition for animations */
+            flex-shrink: 0;
+            /* Prevent lines from shrinking */
+            line-height: 0;
+            /* Remove extra vertical space */
+            position: relative;
+            /* Ensure proper stacking context */
+            z-index: 1;
+            /* Ensure it's above other potential elements */
         }
 
-        .sidebar-toggle span + span {
-            margin-top: 3px; /* Slightly reduced space between the lines */
+        .sidebar-toggle span+span {
+            margin-top: 3px;
+            /* Slightly reduced space between the lines */
         }
 
         /* Ensure the sidebar toggle remains its original size when expanded (Docsify adds 'close' class) */
         .sidebar-toggle.close {
             width: 40px !important;
             height: 40px !important;
-            transform: none !important; /* Reset any transform that might be applied */
+            transform: none !important;
+            /* Reset any transform that might be applied */
         }
 
         /* Specific mobile adjustments for the sidebar toggle */
@@ -135,7 +165,7 @@
             name: 'Privacy Activist Kit',
             coverpage: true,
             loadSidebar: true,
-            subMaxLevel: 2,
+            subMaxLevel: 1,
             alias: {
                 '/.*/_sidebar.md': '/_sidebar.md'
             },
