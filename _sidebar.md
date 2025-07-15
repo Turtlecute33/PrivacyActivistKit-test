@@ -1,31 +1,32 @@
-- [**Home**](/)
-- [**Introduction**](introduction.md)
+- **Home**
+  - [🏠 Welcome](/)
+- **Introduction**
   - [What is the "Personal Data Market"?](introduction.md#what-is-the-personal-data-market)
   - [Digital Minimalism](introduction.md#digital-minimalism)
   - [Open Source](introduction.md#open-source)
-- [**Threat Modeling**](threat-modeling.md)
+- **Threat Modeling**
   - [Who Are You Defending Against?](threat-modeling.md#who-are-you-defending-against-threat-actors)
   - [Define Your Personal Threat Model](threat-modeling.md#how-to-define-your-personal-threat-model)
-- [**Device Security**](device-security.md)
+- **Device Security**
   - [The Operating System](device-security.md#the-operating-system-your-digital-foundation)
   - [Hardening: Strengthening Your System](device-security.md#hardening-strengthening-your-system)
   - [GrapheneOS: A Secure Mobile OS](device-security.md#grapheneos-a-secure-mobile-os)
-- [**Online Anonymity**](online-anonymity.md)
+- **Online Anonymity**
   - [VPN (Virtual Private Network)](online-anonymity.md#vpn-virtual-private-network)
   - [Tor (The Onion Router)](online-anonymity.md#tor-the-onion-router)
   - [DNS (Domain Name System)](online-anonymity.md#dns-domain-name-system)
   - [Browsers and Search Engines](online-anonymity.md#browsers-and-search-engines)
-- [**Secure Communication**](secure-communication.md)
+- **Secure Communication**
   - [Email: Your Digital Mailbox](secure-communication.md#email-your-digital-mailbox)
   - [PGP and Cryptography](secure-communication.md#pgp-and-cryptography)
   - [Secure Messaging](secure-communication.md#secure-messaging)
-- [**Account and Data Security**](account-and-data-security.md)
+- **Account and Data Security**
   - [Passwords and 2FA](account-and-data-security.md#passwords-and-2fa)
   - [Cloud Storage](account-and-data-security.md#cloud-storage)
   - [Note-Taking Applications](account-and-data-security.md#note-taking-applications)
   - [Photos and Metadata](account-and-data-security.md#photos-and-metadata)
-- [**Bitcoin**](bitcoin.md)
+- **Bitcoin**
   - [How to Use Bitcoin Privately](bitcoin.md#how-to-use-bitcoin-privately)
-- [**Bonus Section**](bonus.md)
+- **Bonus Section**
   - [Large Language Models (LLMs)](bonus.md#large-language-models-llms)
   - [VPS and Internet Domains](bonus.md#vps-and-internet-domains)
