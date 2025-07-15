@@ -1,4 +1,4 @@
-- [**🏠 Home**](/)
+- [**🏠 Home**](/README.md)
 - [**📖 Introduction**](introduction.md)
   - [What is the "Personal Data Market"?](introduction.md#what-is-the-personal-data-market)
   - [Digital Minimalism](introduction.md#digital-minimalism)
