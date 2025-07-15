@@ -1,6 +1,6 @@
 # 🕊️ Privacy Activist Kit: Tools for Digital Freedom
 
-Welcome to the official repo of [PrivacyActivistKit.org](https://privacyactivistkit.org/#/)
+Welcome to [PrivacyActivistKit.org](https://privacyactivistkit.org/#/)
 
 This site was built for people who care about privacy, justice, and digital autonomy. Whether you're organizing a protest, teaching a class, helping a friend secure their phone, or just starting to explore the world of privacy — this kit is here to help.
 
@@ -19,7 +19,7 @@ The **Privacy Activist Kit** is a free, open-source hub of privacy tools, how-to
 
 You’ll find:
 
-- 🛠️ Trusted tools and services  
+- 🛠️ tools and services  
 - 📚 Guides tailored to real-life needs  
 - 👩🏽‍🏫 Workshop-friendly teaching resources  
 - 🧩 Clear, no-jargon explanations  
@@ -133,13 +133,6 @@ That means:
 - No commercial use, please  
 
 ---
-
-## 🎀 Last Words
-
-You’re not alone.  
-You’re not too late.  
-You *can* take back control of your digital life.  
-And you deserve tools that respect you.
 
 This kit was made with care. We hope it helps you feel a little more powerful — and a little more protected — online.
 
