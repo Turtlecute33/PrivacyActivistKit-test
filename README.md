@@ -1,193 +1,148 @@
-# 🕊️ Privacy Activist Kit — Your Friendly Toolkit for Online Privacy & Activism
+# 🕊️ Privacy Activist Kit: Tools for Digital Freedom
 
-Welcome to the official repository of **[PrivacyActivistKit.org](https://privacyactivistkit.org/#/)**  
+Welcome to the official repo of [PrivacyActivistKit.org](https://privacyactivistkit.org/#/)
 
-A website lovingly crafted to empower privacy-conscious humans, grassroots activists, educators, and curious minds alike with the tools, knowledge, and resources to take control of their digital lives 🌐💪
+This site was built for people who care about privacy, justice, and digital autonomy. Whether you're organizing a protest, teaching a class, helping a friend secure their phone, or just starting to explore the world of privacy — this kit is here to help.
 
-Whether you're just getting started with privacy or you're the go-to person in your friend group for "which VPN should I use?" — this kit is made for you. It's simple, beautiful, and fully open-source. And you’re very welcome here! 🎉
+No jargon. No gatekeeping. No corporate nonsense. Just clear, useful resources to help you take control of your digital life.
 
 ---
 
-## 🌟 What is the Privacy Activist Kit?
+## 🌟 What is it?
 
-The **Privacy Activist Kit** is a web-based hub that brings together privacy tools, educational content, guides, and principles in one accessible, beginner-friendly place.  
+The **Privacy Activist Kit** is a free, open-source hub of privacy tools, how-to guides, teaching materials, and simple explanations. It’s designed to support:
 
-📦 Think of it as a care package for anyone who wants to take a stand for online freedom, privacy, and security. It’s not just a toolkit — it’s a movement. And you're invited.
+- Activists and organizers
+- Educators and students
+- Curious beginners
+- Anyone tired of being tracked online
 
 You’ll find:
 
-- 🛠️ Privacy-first tools & services  
-- 📚 Easy-to-understand guides for different threat models  
-- 👩🏽‍🏫 Resources for workshops and teaching others  
-- 🧩 No-jargon explanations for complex ideas  
-- 🎨 A cozy, welcoming design made with love  
+- 🛠️ Trusted tools and services  
+- 📚 Guides tailored to real-life needs  
+- 👩🏽‍🏫 Workshop-friendly teaching resources  
+- 🧩 Clear, no-jargon explanations  
+- 🎨 A calm, welcoming design for all skill levels  
 
 ---
 
-## 🖥️ Live Website
+## 🧠 Why We Made This
 
-🌍 Visit the site here: **[https://privacyactivistkit.org/#/](https://privacyactivistkit.org/#/)**  
-It’s 100% free to use, no tracking, no creepy analytics.
+> “Privacy is a right, not a luxury.”
 
----
+The internet can be a powerful space — but it’s also heavily monitored, exploited, and manipulated. That’s not okay.
 
-## 🧠 Philosophy
+This kit was created with a few core beliefs:
 
-> **“Privacy is a right, not a luxury.”**
-
-The internet can be a magical place for connection, organizing, learning, and sharing — but it's also filled with data brokers, surveillance capitalism, and invasive platforms. Yuck.
-
-This kit is rooted in the belief that privacy should be:
-
-- 🧸 **Approachable** — You don’t need to be a hacker or techie to understand it  
-- 🫶 **Inclusive** — Made for activists, artists, students, elders, teens — *everyone*  
-- 🌱 **Sustainable** — Built to grow with contributions from kind humans like you  
-- ❤️ **Non-corporate** — No ads, no affiliates, no sponsorship strings attached  
+- 🧸 **It should be approachable** — No tech background needed  
+- 🫶 **It should be for everyone** — Not just coders or activists  
+- 🌱 **It should be open** — Built to grow with the help of others  
+- ❤️ **It should be independent** — No ads, no sponsors, no strings  
 
 ---
 
-## 🧰 Features & Sections
+## 🧰 What's Inside
 
-Here’s a peek into what’s inside:
+### ✨ Tools
 
-### ✨ Tools & Services
-
-A carefully curated collection of privacy-respecting:
+A handpicked list of privacy-focused:
 
 - Browsers  
 - Messaging apps  
+- Email services  
 - Search engines  
-- Email providers  
-- VPNs and Tor-based options  
+- VPNs and Tor tools  
 - File sharing platforms  
 
-Each entry includes:
+Each one comes with:
 
-- A plain-language explanation  
-- Use cases and who it's for  
-- Links to explore further  
+- A short, plain-language summary  
+- Who it’s for and why it matters  
+- Links to learn more  
 
-### 📚 Guides & Learning [TBD]
+### 📚 Guides [coming soon]
 
-Got a few minutes? Learn things like:
+Learn at your own pace:
 
-- Why encryption matters  
-- How metadata can still expose you  
+- What is encryption and why it matters  
+- How metadata reveals more than you think  
 - What to do if you're being targeted  
-- Threat modeling basics  
-- Secure communication for protestors  
+- How to build a basic threat model  
+- Tips for safe communication during protests  
 
-Designed to be printable, workshop-friendly, and beginner-safe!
+All guides are printable, teachable, and easy to share.
 
-### 🛡️ Activist Resources [TBD]
+### 🛡️ Activist Resources [coming soon]
 
-- Digital security checklists  
+- Security checklists for teams  
 - Burner phone tips  
-- Safer social media practices  
+- Safer social media habits  
 - “Do I need a VPN?” flowcharts  
-- Emergency prep for organizers  
+- Emergency digital prep for organizers  
 
-### 📎 Shareables [TBD]
+### 📎 Shareables [coming soon]
 
-- Posters and flyers  
-- Slide decks for trainers  
-- Zines and handouts  
-- Social media cards  
+- Posters, flyers, and zines  
+- Slide decks and handouts  
+- Social media visuals  
 
-Spread the word in a cute way!
+Because sharing knowledge should be easy — and a little bit fun.
 
 ---
 
 ## ✏️ Contributing
 
-We believe in community-powered knowledge. Want to help out? Here’s how:
+Want to help? You don’t need to be a developer.
 
-1. **Star** ⭐ this repo to show love  
-2. **Fork** it and submit a pull request  
-3. **Fix typos**, add resources, or improve accessibility  
-4. **Translate** a guide into your language  
-5. **Suggest** a new tool or write a new guide  
+Ways to contribute:
 
-All levels welcome. No code required! You can also contribute via:
+- Star ⭐ this repo  
+- Fix typos, add tools, suggest ideas  
+- Translate a guide  
+- Report bugs or outdated links  
+- Share it with your community  
 
-- Feedback and suggestions  
-- Sharing the site with others  
-- Reporting bugs or outdated info  
-
-Check the [`CONTRIBUTING.md`](CONTRIBUTING.md) [TBD] file (if applicable) for more specifics.
+We love small contributions and first-time contributors. See `CONTRIBUTING.md` [coming soon] for more info.
 
 ---
 
-## 🛠️ Built With
+## ☁️ Roadmap
 
-This site is made using:
+Things we’re dreaming up next:
 
-- **Docsify** for a cozy, reactive frontend  
-- **Markdown**-based content for easy editing  
-- **GitHub Pages** for deployment  
-- **No cookies**, no trackers, no nonsense  
+- Interactive guides and privacy “adventures”  
+- Multilingual versions  
+- A searchable tool and guide library  
+- Lesson plans for educators  
+- Side-by-side comparisons of tools  
 
----
-
-## 🫂 Credits & Thank Yous
-
-This project stands on the shoulders of giants. Massive thanks to:
-
-- Privacy champions and open-source contributors across the web  
-- Digital rights activists and educators who do this work every day  
-- Artists, writers, and zine makers who help translate tech into care  
-- The contributors who helped shape and test this kit!  
-
-If you're reading this, thank *you* too 💛
-
----
-
-## ☁️ Roadmap & Dreams [TBD]
-
-Here are some magical things we might build next:
-
-- ✨ Interactive guides or “choose-your-own-adventure” privacy stories  
-- 🌍 Full multilingual support  
-- 🧠 A searchable database of resources  
-- 🧵 Threads & lesson plans for educators  
-- 🧪 Privacy tool comparison playground  
-
-Have ideas? Want to make one of these happen? [Open an issue](https://github.com/your-repo/issues) or [drop a PR](https://github.com/your-repo/pulls) 💫
+Have an idea? [Open an issue](https://github.com/your-repo/issues) or [send a PR](https://github.com/your-repo/pulls)
 
 ---
 
 ## 📜 License
 
-This project is licensed under the [Creative Commons Attribution-NonCommercial 4.0 International License (CC BY-NC 4.0)](https://creativecommons.org/licenses/by-nc/4.0/)
+Creative Commons Attribution-NonCommercial 4.0  
+[Read it here](https://creativecommons.org/licenses/by-nc/4.0/)
 
-This means:
+That means:
 
-- You can share and remix it, as long as you credit us  
+- You can share and remix this work  
+- You must credit the original  
 - No commercial use, please  
-- Always link back to the original site when sharing ❤️  
 
 ---
 
-## 💌 Contact
+## 🎀 Last Words
 
-Have a question or want to connect?
+You’re not alone.  
+You’re not too late.  
+You *can* take back control of your digital life.  
+And you deserve tools that respect you.
 
-- 📧 Email: [TBD] 
-- 🗣️ GitHub Issues: For bugs, ideas, or high-fives  
+This kit was made with care. We hope it helps you feel a little more powerful — and a little more protected — online.
 
----
+Stay safe out there ✨
 
-## 🎀 Final Words
-
-You are not alone.  
-You are not too late.  
-You *can* protect yourself and your communities online.  
-And you deserve tools that don’t exploit your trust.
-
-This kit was made with love, and we hope it becomes your cozy go-to for reclaiming your digital space.
-
-Thanks for visiting. Stay safe and stay curious. ✨
-
-<div class="next-section-button-container">
-<p align="right"><a href="#/introduction" class="next-section-button">Next Section &rarr;</a></p>
-</div>
+<p align="right"><a href="#/introduction" class="next-section-button">Next Section →</a></p>
