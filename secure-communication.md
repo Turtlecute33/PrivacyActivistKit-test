@@ -78,4 +78,6 @@ You probably use messaging apps like WhatsApp or Telegram every day. While they 
 -   [**XMPP**](https://xmpp.org/): A decentralized protocol, not a single app. It's the foundation upon which services like WhatsApp were built. It doesn't require personal data and is extremely stable, but it's less user-friendly than Signal.
 -   [**Simplex**](https://simplex.chat/): A modern messenger that provides the best metadata protection. It requires no personal data at all—not even a phone number. It's still a bit new, but very promising for those with a high threat model.
 
+<div class="next-section-button-container">
 <p align="right"><a href="#/account-and-data-security" class="next-section-button">Next Section &rarr;</a></p>
+</div>

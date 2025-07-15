@@ -81,4 +81,6 @@ The easiest way to install it is via the **[Web Installer](https://grapheneos.or
 -   **"Kill Switch" PIN:** You can set up a secondary PIN that, when entered, instantly wipes all the data on the phone in an emergency.
 -   **No Google Services:** By default, it has no Google apps or services, completely cutting off Google's data collection from the core of your device.
 
+<div class="next-section-button-container">
 <p align="right"><a href="#/online-anonymity" class="next-section-button">Next Section &rarr;</a></p>
+</div>

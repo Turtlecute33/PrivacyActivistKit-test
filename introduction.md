@@ -57,4 +57,6 @@ Open source operates on the principle that "given enough eyeballs, all bugs are 
 
 Using transparent, open-source software is fundamental. It doesn't eliminate all risks, but it drastically reduces your attack surface because the code is constantly being held accountable by the community. **If possible, always prefer and use open-source applications.**
 
+<div class="next-section-button-container">
 <p align="right"><a href="#/threat-modeling" class="next-section-button">Next Section &rarr;</a></p>
+</div>

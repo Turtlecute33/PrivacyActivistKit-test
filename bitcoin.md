@@ -46,4 +46,6 @@ For small, everyday payments, use the **Lightning Network**. It's a second layer
 
 > Always use Bitcoin when purchasing privacy-oriented products and services (like a VPN or a private server) or anything you don't want to be easily linked to your real-world identity.
 
+<div class="next-section-button-container">
 <p align="right"><a href="#/bonus" class="next-section-button">Next Section &rarr;</a></p>
+</div>

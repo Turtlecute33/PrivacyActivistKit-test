@@ -81,4 +81,6 @@ This is a huge privacy risk. You probably don't want to share your home's exact 
 -   **Mobile:** Use an app like [**Scrambled Exif**](https://play.google.com/store/apps/details?id=com.jarsilio.android.scrambledeggsif) on Android to remove this metadata *before* you share photos. On iOS, the built-in Photos app allows you to remove location data when sharing.
 -   **Desktop:** If you're concerned about facial recognition, a tool called [**Fawkes**](https://sandlab.cs.uchicago.edu/fawkes/) can make subtle pixel-level changes to your photos (invisible to the human eye) that "cloak" your face and disrupt facial scanning tools.
 
+<div class="next-section-button-container">
 <p align="right"><a href="#/bitcoin" class="next-section-button">Next Section &rarr;</a></p>
+</div>

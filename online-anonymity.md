@@ -105,4 +105,6 @@ Google's business model is to track your searches to sell ads. To avoid this, us
 -   [**Kagi**](https://kagi.com/): A premium, ad-free search engine funded entirely by its users (requires a subscription).
 -   [**4Get**](https://4get.turtlecute.org/): An open-source "meta-search engine" that anonymizes your query and gets results from other engines without revealing who you are.
 
+<div class="next-section-button-container">
 <p align="right"><a href="#/secure-communication" class="next-section-button">Next Section &rarr;</a></p>
+</div>

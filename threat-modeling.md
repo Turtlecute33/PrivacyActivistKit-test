@@ -57,4 +57,6 @@ Ask yourself these five questions to build a clear picture of your needs:
 
 By spending a few minutes thinking through your threat model, you can focus your energy on the solutions that provide the most protection for *your* specific situation.
 
+<div class="next-section-button-container">
 <p align="right"><a href="#/device-security" class="next-section-button">Next Section &rarr;</a></p>
+</div>

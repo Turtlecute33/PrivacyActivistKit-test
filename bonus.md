@@ -46,4 +46,6 @@ Do you need to create websites, buy domains, or host personal services on rented
 
 > There are many other privacy-oriented providers that accept Bitcoin (e.g., 1984hosting, Cockbox). Look for services that fit your technical needs (bandwidth, jurisdiction, CPU). I have tried all the services mentioned above and have always been satisfied.
 
+<div class="next-section-button-container">
 <p align="right"><a href="#/" class="next-section-button">Back to Home &rarr;</a></p>
+</div>

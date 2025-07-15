@@ -9,3 +9,7 @@ In an era of mass surveillance and digital tracking, it is crucial for activists
 ## Getting Started
 
 To get started, explore the topics in the sidebar. Each section provides detailed information and actionable steps to enhance your digital security posture.
+
+<div class="next-section-button-container">
+<p align="right"><a href="#/introduction" class="next-section-button">Next Section &rarr;</a></p>
+</div>
