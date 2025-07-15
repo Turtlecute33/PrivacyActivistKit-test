@@ -1,21 +1,16 @@
 # 🕊️ Privacy Activist Kit: Tools for Digital Freedom
 
-Welcome to [PrivacyActivistKit.org](https://privacyactivistkit.org/#/)
+Welcome to [PrivacyActivistKit](https://privacyactivistkit.org/#/)!
 
 This site was built for people who care about privacy, justice, and digital autonomy. Whether you're organizing a protest, teaching a class, helping a friend secure their phone, or just starting to explore the world of privacy — this kit is here to help.
 
-No jargon. No gatekeeping. No corporate nonsense. Just clear, useful resources to help you take control of your digital life.
+Clear, practical resources to help you take control of your digital life without the corporate fluff.
 
 ---
 
 ## 🌟 What is it?
 
-The **Privacy Activist Kit** is a free, open-source hub of privacy tools, how-to guides, teaching materials, and simple explanations. It’s designed to support:
-
-- Activists and organizers
-- Educators and students
-- Curious beginners
-- Anyone tired of being tracked online
+The **Privacy Activist Kit** is a free, open-source hub of privacy tools, how-to guides, teaching materials, and simple explanations designed to support activists, organizers, educators, students, curious beginners, and anyone tired of being tracked online.
 
 You’ll find:
 
@@ -23,7 +18,6 @@ You’ll find:
 - 📚 Guides tailored to real-life needs  
 - 👩🏽‍🏫 Workshop-friendly teaching resources  
 - 🧩 Clear, no-jargon explanations  
-- 🎨 A calm, welcoming design for all skill levels  
 
 ---
 
@@ -44,50 +38,10 @@ This kit was created with a few core beliefs:
 
 ## 🧰 What's Inside
 
-### ✨ Tools
-
-A handpicked list of privacy-focused:
-
-- Browsers  
-- Messaging apps  
-- Email services  
-- Search engines  
-- VPNs and Tor tools  
-- File sharing platforms  
-
-Each one comes with:
-
-- A short, plain-language summary  
-- Who it’s for and why it matters  
-- Links to learn more  
-
-### 📚 Guides [coming soon]
-
-Learn at your own pace:
-
-- What is encryption and why it matters  
-- How metadata reveals more than you think  
-- What to do if you're being targeted  
-- How to build a basic threat model  
-- Tips for safe communication during protests  
-
-All guides are printable, teachable, and easy to share.
-
-### 🛡️ Activist Resources [coming soon]
-
-- Security checklists for teams  
-- Burner phone tips  
-- Safer social media habits  
-- “Do I need a VPN?” flowcharts  
-- Emergency digital prep for organizers  
-
-### 📎 Shareables [coming soon]
-
-- Posters, flyers, and zines  
-- Slide decks and handouts  
-- Social media visuals  
-
-Because sharing knowledge should be easy — and a little bit fun.
+- Privacy Tools: Curated list of secure browsers, messaging apps, email services, search engines, VPNs, Tor tools, and file sharing platforms.
+- Guides (Coming Soon): Easy-to-understand, printable lessons on encryption, metadata, threat modeling, protest safety, and more.
+- Activist Resources (Coming Soon): Practical tools like security checklists, burner phone tips, VPN flowcharts, and emergency prep.
+- Shareables (Coming Soon): Posters, zines, slides, and social media visuals for easy, engaging knowledge-sharing.
 
 ---
 
@@ -104,18 +58,6 @@ Ways to contribute:
 - Share it with your community  
 
 We love small contributions and first-time contributors. See `CONTRIBUTING.md` [coming soon] for more info.
-
----
-
-## ☁️ Roadmap
-
-Things we’re dreaming up next:
-
-- Interactive guides and privacy “adventures”  
-- Multilingual versions  
-- A searchable tool and guide library  
-- Lesson plans for educators  
-- Side-by-side comparisons of tools  
 
 Have an idea? [Open an issue](https://github.com/your-repo/issues) or [send a PR](https://github.com/your-repo/pulls)
 
