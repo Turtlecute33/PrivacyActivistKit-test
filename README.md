@@ -6,7 +6,6 @@ This site was built for people who care about privacy, justice, and digital auto
 
 Clear, practical resources to help you take control of your digital life without the corporate fluff.
 
----
 
 ## 🌟 What is it?
 
@@ -19,7 +18,6 @@ You’ll find:
 - 👩🏽‍🏫 Workshop-friendly teaching resources  
 - 🧩 Clear, no-jargon explanations  
 
----
 
 ## 🧠 Why We Made This
 
@@ -34,7 +32,6 @@ This kit was created with a few core beliefs:
 - 🌱 **It should be open** — Built to grow with the help of others  
 - ❤️ **It should be independent** — No ads, no sponsors, no strings  
 
----
 
 ## 🧰 What's Inside
 
@@ -43,7 +40,6 @@ This kit was created with a few core beliefs:
 - Activist Resources (Coming Soon): Practical tools like security checklists, burner phone tips, VPN flowcharts, and emergency prep.
 - Shareables (Coming Soon): Posters, zines, slides, and social media visuals for easy, engaging knowledge-sharing.
 
----
 
 ## ✏️ Contributing
 
@@ -53,8 +49,6 @@ We welcome all contributions, especially from first-timers and those making smal
 
 Have an idea or suggestion? [Open an issue](https://github.com/Turtlecute33/PrivacyActivistKit/issues) or [submit a pull request](https://github.com/Turtlecute33/PrivacyActivistKit/pulls).
 
-
----
 
 ## 📜 License
 
