@@ -1,4 +1,4 @@
-# 📖 Introduction
+# Introduction
 
 Welcome to the definitive guide to digital privacy. This is an introductory manual designed to empower you as a **sovereign individual**. The goal is to help you understand and escape the omnipresent surveillance and the personal data market that have become normalized in our daily lives.
 

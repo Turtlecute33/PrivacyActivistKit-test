@@ -1,30 +1,80 @@
-- [**🏠 Home**](/README.md)
-- [**📖 Introduction**](introduction.md)
-  - [Digital Minimalism](introduction?id=%f0%9f%a7%b9-digital-minimalism)
-  - [Open Source](introduction?id=%f0%9f%a4%9d-open-source)
-- [**🎯 Threat Modeling**](threat-modeling.md)
-  - [Who Are You Defending Against?](threat-modeling.md#who-are-you-defending-against-threat-actors)
-  - [Define Your Personal Threat Model](threat-modeling.md#how-to-define-your-personal-threat-model)
-- [**🛡️ Device Security**](device-security.md)
-  - [The Operating System](device-security.md#the-operating-system-your-digital-foundation)
-  - [Hardening: Strengthening Your System](device-security?id=%f0%9f%92%aa-hardening-strengthening-your-system)
-  - [GrapheneOS: A Secure Mobile OS](device-security?id=%f0%9f%93%b1-grapheneos-a-secure-mobile-os)
-- [**🌐 Online Anonymity**](online-anonymity.md)
-  - [VPN (Virtual Private Network)](online-anonymity?id=%f0%9f%9b%a1%ef%b8%8f-vpn-virtual-private-network)
-  - [Tor (The Onion Router)](online-anonymity?id=%f0%9f%a7%85-tor-the-onion-router)
-  - [DNS (Domain Name System)](online-anonymity?id=%f0%9f%8c%90-dns-domain-name-system)
-  - [Browsers and Search Engines](online-anonymity?id=%f0%9f%95%b5%ef%b8%8f-browsers-and-search-engines)
-- [**✉️ Secure Communication**](secure-communication.md)
-  - [Email: Your Digital Mailbox](secure-communication.md#email-your-digital-mailbox)
-  - [PGP and Cryptography](secure-communication?id=%f0%9f%94%90-pgp-and-cryptography)
-  - [Secure Messaging](secure-communication?id=%f0%9f%92%ac-secure-messaging)
-- [**🔑 Account and Data Security**](account-and-data-security.md)
-  - [Passwords and 2FA](account-and-data-security.md#passwords-and-2fa)
-  - [Cloud Storage](account-and-data-security?id=%e2%98%81%ef%b8%8f-cloud-storage)
-  - [Note-Taking Applications](account-and-data-security?id=%f0%9f%93%9d-note-taking-applications)
-  - [Photos and Metadata](account-and-data-security?id=%f0%9f%96%bc%ef%b8%8f-photos-and-metadata)
-- [**₿ Bitcoin**](bitcoin.md)
-  - [How to Use Bitcoin Privately](bitcoin.md#how-to-use-bitcoin-privately)
-- [**Bonus Section**](bonus.md)
-  - [Large Language Models (LLMs)](bonus.md#large-language-models-llms)
-  - [VPS and Internet Domains](bonus.md#vps-and-internet-domains)
+<ul>
+    <li><a href="#/">Home</a></li>
+    <li>
+        <details>
+            <summary>Introduction</summary>
+            <ul>
+                <li><a href="#/introduction?id=digital-minimalism">Digital Minimalism</a></li>
+                <li><a href="#/introduction?id=open-source">Open Source</a></li>
+            </ul>
+        </details>
+    </li>
+    <li>
+        <details>
+            <summary>Threat Modeling</summary>
+            <ul>
+                <li><a href="#/threat-modeling?id=who-are-you-defending-against-threat-actors">Who Are You Defending Against?</a></li>
+                <li><a href="#/threat-modeling?id=how-to-define-your-personal-threat-model">Define Your Personal Threat Model</a></li>
+            </ul>
+        </details>
+    </li>
+    <li>
+        <details>
+            <summary>Device Security</summary>
+            <ul>
+                <li><a href="#/device-security?id=the-operating-system-your-digital-foundation">The Operating System</a></li>
+                <li><a href="#/device-security?id=hardening-strengthening-your-system">Hardening: Strengthening Your System</a></li>
+                <li><a href="#/device-security?id=grapheneos-a-secure-mobile-os">GrapheneOS: A Secure Mobile OS</a></li>
+            </ul>
+        </details>
+    </li>
+    <li>
+        <details>
+            <summary>Online Anonymity</summary>
+            <ul>
+                <li><a href="#/online-anonymity?id=vpn-virtual-private-network">VPN (Virtual Private Network)</a></li>
+                <li><a href="#/online-anonymity?id=tor-the-onion-router">Tor (The Onion Router)</a></li>
+                <li><a href="#/online-anonymity?id=dns-domain-name-system">DNS (Domain Name System)</a></li>
+                <li><a href="#/online-anonymity?id=browsers-and-search-engines">Browsers and Search Engines</a></li>
+            </ul>
+        </details>
+    </li>
+    <li>
+        <details>
+            <summary>Secure Communication</summary>
+            <ul>
+                <li><a href="#/secure-communication?id=email-your-digital-mailbox">Email: Your Digital Mailbox</a></li>
+                <li><a href="#/secure-communication?id=pgp-and-cryptography">PGP and Cryptography</a></li>
+                <li><a href="#/secure-communication?id=secure-messaging">Secure Messaging</a></li>
+            </ul>
+        </details>
+    </li>
+    <li>
+        <details>
+            <summary>Account and Data Security</summary>
+            <ul>
+                <li><a href="#/account-and-data-security?id=passwords-and-2fa">Passwords and 2FA</a></li>
+                <li><a href="#/account-and-data-security?id=cloud-storage">Cloud Storage</a></li>
+                <li><a href="#/account-and-data-security?id=note-taking-applications">Note-Taking Applications</a></li>
+                <li><a href="#/account-and-data-security?id=photos-and-metadata">Photos and Metadata</a></li>
+            </ul>
+        </details>
+    </li>
+    <li>
+        <details>
+            <summary>Bitcoin</summary>
+            <ul>
+                <li><a href="#/bitcoin?id=how-to-use-bitcoin-privately">How to Use Bitcoin Privately</a></li>
+            </ul>
+        </details>
+    </li>
+    <li>
+        <details>
+            <summary>Bonus Section</summary>
+            <ul>
+                <li><a href="#/bonus?id=large-language-models-llms">Large Language Models (LLMs)</a></li>
+                <li><a href="#/bonus?id=vps-and-internet-domains">VPS and Internet Domains</a></li>
+            </ul>
+        </details>
+    </li>
+</ul>

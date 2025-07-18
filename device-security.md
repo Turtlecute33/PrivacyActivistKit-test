@@ -1,4 +1,4 @@
-# 🛡️ Device Security
+# Device Security
 
 ## The Operating System: Your Digital Foundation
 
@@ -35,7 +35,7 @@ For this reason, for any sensitive operations, it's best to use a secure, open-s
 
 ---
 
-## 💪 Hardening: Strengthening Your System
+## Hardening: Strengthening Your System
 
 "Hardening" is the process of making your system more resistant to attacks. Think of it as reinforcing your house before a storm: you board up the windows, lock the doors, and remove anything from the yard that could be blown away.
 

@@ -162,6 +162,92 @@
                 display: none !important;
             }
         }
+
+        /* --- Modern Sidebar --- */
+        .sidebar-nav {
+            padding-top: 10px;
+        }
+
+        .sidebar-nav>ul>li {
+            margin-bottom: 5px;
+        }
+
+        /* Combined rule for Home link and section summaries */
+        .sidebar-nav>ul>li:first-child>a,
+        .sidebar-nav summary {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            font-weight: 600;
+            padding: 10px 15px;
+            border-radius: 6px;
+            transition: background-color 0.2s ease-in-out;
+            outline: none;
+            list-style: none;
+            color: #505050;
+            text-decoration: none;
+            font-size: 1em; /* Consistent font size */
+        }
+
+        .sidebar-nav>ul>li:first-child>a:hover,
+        .sidebar-nav summary:hover {
+            background-color: rgba(66, 185, 131, 0.1);
+        }
+
+        .sidebar-nav summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .sidebar-nav summary::before {
+            content: '›';
+            font-size: 1.5em;
+            line-height: 1;
+            margin-right: 10px;
+            font-weight: bold;
+            color: #999;
+            transition: transform 0.2s ease-in-out;
+            transform-origin: center;
+        }
+
+        .sidebar-nav details[open]>summary::before {
+            transform: rotate(90deg);
+            color: #42b983;
+        }
+
+        .sidebar-nav details[open]>summary {
+            font-weight: 700;
+            color: #42b983;
+        }
+
+        .sidebar-nav details>ul {
+            list-style-type: none;
+            padding-left: 20px;
+            margin-top: 0;
+            border-left: 2px solid #eee;
+            margin-left: 28px;
+        }
+
+        .sidebar-nav details ul li a {
+            text-decoration: none;
+            color: #505050;
+            display: block;
+            padding: 8px 15px;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: background-color 0.2s ease, color 0.2s ease;
+            font-size: 0.8em;
+        }
+
+        .sidebar-nav details ul li a:hover {
+            background-color: rgba(66, 185, 131, 0.1);
+            color: #42b983;
+        }
+
+        .sidebar-nav .active>a {
+            background-color: #42b983;
+            color: white !important;
+            font-weight: 600;
+        }
     </style>
 </head>
 
@@ -181,6 +267,62 @@
     </script>
     <!-- Docsify v4 -->
     <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+    <script>
+        // Plugin to persist sidebar collapse state
+        function persistSidebar(hook, vm) {
+            const storageKey = 'sidebar_collapse_state';
+
+            // Function to save the state
+            function saveState() {
+                const state = {};
+                document.querySelectorAll('.sidebar-nav details').forEach((details, index) => {
+                    const summary = details.querySelector('summary');
+                    if (summary) {
+                        // Use summary text as a unique key
+                        const key = summary.innerText;
+                        state[key] = details.hasAttribute('open');
+                    }
+                });
+                sessionStorage.setItem(storageKey, JSON.stringify(state));
+            }
+
+            // Function to restore the state
+            function restoreState() {
+                const savedState = JSON.parse(sessionStorage.getItem(storageKey));
+                if (savedState) {
+                    document.querySelectorAll('.sidebar-nav details').forEach(details => {
+                        const summary = details.querySelector('summary');
+                        if (summary) {
+                            const key = summary.innerText;
+                            if (savedState[key] !== undefined) {
+                                if (savedState[key]) {
+                                    details.setAttribute('open', '');
+                                } else {
+                                    details.removeAttribute('open');
+                                }
+                            }
+                        }
+                    });
+                }
+            }
+
+            // Add event listener to save state on toggle
+            document.addEventListener('click', function(event) {
+                if (event.target.tagName === 'SUMMARY') {
+                    // Use a small timeout to allow the 'open' attribute to update
+                    setTimeout(saveState, 100);
+                }
+            });
+
+            // Hook to restore state after each page load
+            hook.doneEach(function() {
+                restoreState();
+            });
+        }
+
+        // Add the plugin to Docsify
+        window.$docsify.plugins = [].concat(window.$docsify.plugins || [], persistSidebar);
+    </script>
 </body>
 
 </html>

@@ -1,4 +1,4 @@
-# 🌐 Online Anonymity
+# Online Anonymity
 
 ## 🛡️ VPN (Virtual Private Network)
 

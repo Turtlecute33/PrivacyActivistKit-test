@@ -1,4 +1,4 @@
-# 🔑 Account and Data Security
+# Account and Data Security
 
 ## Passwords and 2FA
 
@@ -41,7 +41,7 @@ It's impossible to remember a unique, strong passphrase for every account you ha
 
 ---
 
-## ☁️ Cloud Storage
+## Cloud Storage
 
 **Difficulty:** ★
 
@@ -55,7 +55,7 @@ The cloud is convenient, but it means storing your data on someone else's comput
 
 ---
 
-## 📝 Note-Taking Applications
+## Note-Taking Applications
 
 **Difficulty:** ★
 
@@ -67,7 +67,7 @@ Choosing a note-taking app is highly personal. The most important feature for pr
 
 ---
 
-## 🖼️ Photos and Metadata
+## Photos and Metadata
 
 **Difficulty:** ★
 

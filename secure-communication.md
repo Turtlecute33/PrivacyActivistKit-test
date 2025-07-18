@@ -1,4 +1,4 @@
-# ✉️ Secure Communication
+# Secure Communication
 
 ## Email: Your Digital Mailbox
 
