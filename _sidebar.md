@@ -51,7 +51,7 @@
     </li>
     <li>
         <details>
-            <summary>Account and Data Security</summary>
+            <summary>Accounts & Data</summary>
             <ul>
                 <li><a href="#/account-and-data-security?id=passwords-and-2fa">Passwords and 2FA</a></li>
                 <li><a href="#/account-and-data-security?id=cloud-storage">Cloud Storage</a></li>
