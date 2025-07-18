@@ -172,8 +172,22 @@
             margin-bottom: 5px;
         }
 
-        /* Combined rule for Home link and section summaries */
-        .sidebar-nav>ul>li:first-child>a,
+        /* Rule for Home link */
+        .sidebar-nav>ul>li:first-child>a {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            font-weight: 600;
+            padding: 10px 15px;
+            border-radius: 6px;
+            transition: background-color 0.2s ease-in-out;
+            color: #505050;
+            text-decoration: none;
+            font-size: 1em;
+            position: relative;
+        }
+
+        /* Rule for section summaries */
         .sidebar-nav summary {
             display: flex;
             align-items: center;
@@ -186,7 +200,7 @@
             list-style: none;
             color: #505050;
             text-decoration: none;
-            font-size: 1em; /* Consistent font size */
+            font-size: 1em;
         }
 
         .sidebar-nav>ul>li:first-child>a:hover,
@@ -236,6 +250,7 @@
             font-weight: 500;
             transition: background-color 0.2s ease, color 0.2s ease;
             font-size: 0.8em;
+            position: relative;
         }
 
         .sidebar-nav details ul li a:hover {
@@ -243,10 +258,28 @@
             color: #42b983;
         }
 
+        /* New Active Link Style */
         .sidebar-nav .active>a {
+            color: #42b983 !important;
+            font-weight: 700;
+            border-radius: 0;
+            /* Ensure no rounded corners */
+            border: none !important;
+            outline: none !important;
+            box-shadow: none !important;
+        }
+
+        .sidebar-nav .active>a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
             background-color: #42b983;
-            color: white !important;
-            font-weight: 600;
+            border-radius: 0;
+            /* Ensure no rounded corners */
+            transform: none;
         }
     </style>
 </head>

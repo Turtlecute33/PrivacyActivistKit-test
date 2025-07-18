@@ -65,7 +65,7 @@ For most users, hardening a Linux system is not strictly necessary. However, if 
 
 ---
 
-## 📱 GrapheneOS: A Secure Mobile OS
+## GrapheneOS: A Secure Mobile OS
 
 **Difficulty:** ★★
 

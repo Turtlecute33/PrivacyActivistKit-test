@@ -1,6 +1,6 @@
 # Online Anonymity
 
-## 🛡️ VPN (Virtual Private Network)
+## VPN (Virtual Private Network)
 
 **Difficulty:** ★
 
@@ -43,7 +43,7 @@ Here are three of the most reliable and trustworthy services:
 
 ---
 
-## 🧅 Tor (The Onion Router)
+## Tor (The Onion Router)
 
 **Difficulty:** ★
 
@@ -65,7 +65,7 @@ The main drawback is that it's **much slower** than a VPN. To use it, download t
 
 ---
 
-## 🌐 DNS (Domain Name System)
+## DNS (Domain Name System)
 
 **Difficulty:** ★
 
@@ -83,7 +83,7 @@ Some recommended DNS providers:
 
 ---
 
-## 🕵️ Browsers and Search Engines
+## Browsers and Search Engines
 
 **Difficulty:** ★
 

@@ -34,7 +34,7 @@ An alias is a "forwarding" address. It's a unique, fake email that forwards mess
 
 ---
 
-## 🔐 PGP and Cryptography
+## PGP and Cryptography
 
 **Difficulty:** ★★★
 
@@ -60,7 +60,7 @@ This is **asymmetric cryptography**. You can share your public key freely, and p
 
 ---
 
-## 💬 Secure Messaging
+## Secure Messaging
 
 **Difficulty:** ★
 

@@ -29,7 +29,7 @@ At the beginning of each section, you will see a star rating to indicate the dif
 
 ---
 
-## 🧹 Digital Minimalism
+## Digital Minimalism
 
 The most important principle for digital security is **minimalism**. Think of your digital life like a house: the more doors and windows you have (software, apps, accounts), the more potential entry points there are for an intruder. This is your **"attack surface."** The less software, code, and files you have on your devices, the smaller your attack surface.
 
@@ -44,7 +44,7 @@ Simplicity is your best ally. A minimalist digital life is not only faster and m
 
 ---
 
-## 🤝 Open Source
+## Open Source
 
 The second core principle is **open source**. Think of it as the difference between a secret family recipe and a recipe published in a famous cookbook for everyone to see and critique.
 
