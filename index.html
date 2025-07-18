@@ -9,17 +9,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
     <style>
-        html,
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             min-height: 100%;
+            font-size: var(--base-font-size);
         }
 
         :root {
             --base-font-size: 16px;
-        }
-
-        body {
-            font-size: var(--base-font-size);
         }
 
         /* Increase font size for larger screens */
@@ -292,11 +292,9 @@
             coverpage: true,
             loadSidebar: "_sidebar.md",
             subMaxLevel: 1,
-
             auto2top: true,
         }
     </script>
-    <!-- Docsify v4 -->
     <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
     <script>
         // Plugin to persist sidebar collapse state
@@ -353,6 +351,34 @@
 
         // Add the plugin to Docsify
         window.$docsify.plugins = [].concat(window.$docsify.plugins || [], persistSidebar);
+
+        // Smooth scroll functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scroll down when "Get Started" is clicked
+            document.body.addEventListener('click', function(e) {
+                if (e.target.matches('a.button[href="#/README"]')) {
+                    e.preventDefault();
+                    const mainContent = document.getElementById('main');
+                    if (mainContent) {
+                        mainContent.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+
+            // Smooth scroll to top when the site name is clicked
+            const appNameLink = document.querySelector('.app-name-link');
+            if (appNameLink) {
+                appNameLink.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                });
+            }
+        });
     </script>
 </body>
 
