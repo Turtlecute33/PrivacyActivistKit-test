@@ -4,6 +4,7 @@
         <details>
             <summary>Introduction</summary>
             <ul>
+                <li><a href="#/introduction?id=understanding-privacy-in-the-digital-age">Understanding Privacy</a></li>
                 <li><a href="#/introduction?id=digital-minimalism">Digital Minimalism</a></li>
                 <li><a href="#/introduction?id=open-source">Open Source</a></li>
             </ul>
