@@ -1,4 +1,4 @@
-# Bitcoin
+### How to Use Bitcoin Privately
 
 **Difficulty:** ★★
 
@@ -11,10 +11,6 @@ The two main tools for private financial transactions are:
 
 > **A Note on "Privacy Coins" (e.g., Monero):**
 > While coins like Monero are designed for privacy with a hidden ledger, they are **not a valid alternative to Bitcoin for use as money.** They suffer from significant problems: they don't preserve value over the long term, they have a much smaller user base (which can paradoxically harm privacy), and they often have a history of technical vulnerabilities.
-
----
-
-### How to Use Bitcoin Privately
 
 By default, Bitcoin is **not** anonymous; it is **pseudonymous**. All transactions are recorded on a public ledger called the **blockchain**. Think of it as a giant, public notebook that everyone in the world can read. Transactions are linked to addresses (e.g., `bc1q...`), not names. However, if your real identity is ever linked to one of your addresses, your entire transaction history can be traced.
 

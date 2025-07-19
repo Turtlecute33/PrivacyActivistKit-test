@@ -1,9 +1,3 @@
-# Bonus Section
-
-This section includes various information on services or concepts that may not be important for everyone but could be interesting for some readers.
-
----
-
 ## Large Language Models (LLMs)
 
 **Difficulty:** ★★
