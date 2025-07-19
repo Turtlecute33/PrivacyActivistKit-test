@@ -1,5 +1,3 @@
-# Online Anonymity
-
 ## VPN (Virtual Private Network)
 
 **Difficulty:** ★

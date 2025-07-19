@@ -1,12 +1,10 @@
-# Threat Modeling
+## Who Are You Defending Against? 
 
 **Difficulty:** ★
 
 Before you can protect yourself, you must understand what you're protecting yourself from. This process is called **threat modeling**. It's a structured way of thinking about the unique risks to your digital life. When it comes to privacy and security, it is crucial to be clear about **who you need to defend yourself from** and **what you need to protect**.
 
 Your privacy needs are not the same as everyone else's. A generic approach to privacy is better than nothing, but a personalized one is far more effective.
-
-### Who Are You Defending Against? (Threat Actors)
 
 A "threat actor" is anyone who might want to compromise your privacy or security. Here are some common examples:
 
@@ -16,7 +14,7 @@ A "threat actor" is anyone who might want to compromise your privacy or security
 -   **Cybercriminals:** These actors want to steal your money, your identity, or your sensitive data for financial gain. This includes hackers who deploy ransomware or phishing attacks.
 -   **A Specific, Targeted Individual:** This could be a stalker, an abusive ex-partner, a malicious co-worker, or a business rival. This is often the most dangerous threat actor, as they are personally motivated to harm you.
 
-### How to Define Your Personal Threat Model
+## How to Define Your Personal Threat Model
 
 Ask yourself these five questions to build a clear picture of your needs:
 

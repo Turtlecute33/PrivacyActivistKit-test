@@ -1,5 +1,3 @@
-# Device Security
-
 ## The Operating System: Your Digital Foundation
 
 **Difficulty:** ★★

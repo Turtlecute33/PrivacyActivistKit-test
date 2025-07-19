@@ -1,5 +1,3 @@
-# Secure Communication
-
 ## Email: Your Digital Mailbox
 
 **Difficulty:** ★

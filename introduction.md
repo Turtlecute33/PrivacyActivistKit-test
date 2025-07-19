@@ -1,4 +1,4 @@
-# Introduction
+## Introduction
 
 Welcome to the definitive guide to digital privacy. This is an introductory manual designed to empower you as a **sovereign individual**. This guide will teach you how to reclaim control over your digital identity.
 

@@ -1,5 +1,3 @@
-# Account and Data Security
-
 ## Passwords and 2FA
 
 **Difficulty:** ★

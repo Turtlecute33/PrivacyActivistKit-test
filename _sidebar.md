@@ -2,8 +2,9 @@
     <li><a href="#/README.md">About</a></li>
     <li>
         <details>
-            <summary>Introduction</summary>
+            <summary>Privacy</summary>
             <ul>
+                <li><a href="#/introduction?id=Introduction">Introduction</a></li>
                 <li><a href="#/introduction?id=understanding-privacy-in-the-digital-age">Understanding Privacy</a></li>
                 <li><a href="#/introduction?id=digital-minimalism">Digital Minimalism</a></li>
                 <li><a href="#/introduction?id=open-source">Open Source</a></li>
