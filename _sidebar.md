@@ -1,5 +1,5 @@
 <ul>
-    <li><a href="#/README.md">Home</a></li>
+    <li><a href="#/README.md">About</a></li>
     <li>
         <details>
             <summary>Introduction</summary>
