@@ -1,4 +1,4 @@
-### How to Use Bitcoin Privately
+## How to Use Bitcoin Privately
 
 **Difficulty:** ★★
 
