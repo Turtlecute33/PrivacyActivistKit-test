@@ -33,11 +33,22 @@ function persistSidebar(hook, vm) {
         restoreState();
     });
 
+    // Add a more intelligent click handler
     document.addEventListener('click', function(event) {
-        if (event.target.tagName === 'SUMMARY') {
-            setTimeout(saveState, 100);
+        const sidebarNav = event.target.closest('.sidebar-nav');
+        // Check if the click is inside the sidebar
+        if (sidebarNav) {
+            // Check if the click was specifically on a SUMMARY tag (the expand/collapse button)
+            if (event.target.tagName === 'SUMMARY') {
+                // Stop the click from bubbling up and triggering Docsify's sidebar close behavior
+                event.stopPropagation();
+                // Save the open/close state after a tiny delay to ensure the UI has updated
+                setTimeout(saveState, 100);
+            }
+            // For any other click inside the sidebar (e.g., on an <a> link),
+            // we do nothing, allowing the event to bubble up and let Docsify close the sidebar as intended.
         }
-    });
+    }, true); // Use capture phase to catch the event early
 }
 
 // --- SIMPLIFIED SCROLL PLUGIN ---
