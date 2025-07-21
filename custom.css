@@ -206,13 +206,42 @@ body h2 {
     color: #42b983;
 }
 
-/* --- THE ONLY FIX YOU NEED --- */
+/* --- THE FINAL, DEFINITIVE, AND CORRECT STYLES --- */
 
-/* 1. This rule makes any NESTED link active AND adds the green bar */
+/* 1. This is a comprehensive reset for the active "About" link and its parent list item. */
+/* It removes ALL default theme styles (background, border, shadow, etc.) from BOTH elements. */
+.sidebar-nav > ul > li:first-child.active,
+.sidebar-nav > ul > li:first-child.active > a {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+/* This rule ensures the "About" link's text is green and bold when active. */
+.sidebar-nav > ul > li:first-child.active > a {
+    color: #42b983 !important;
+    font-weight: 700 !important;
+}
+
+/* 2. This rule makes the parent section title (e.g., "Privacy") green. */
+.sidebar-nav details.active-section > summary {
+    font-weight: 700;
+    color: #42b983;
+}
+
+/* 3. This rule styles the active NESTED links (e.g., "Open Source") */
 .sidebar-nav details .active > a {
     color: #42b983 !important;
-    font-weight: 700;
+    font-weight: 700 !important;
+    background-color: transparent !important;
+    border-radius: 0;
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
 }
+
+/* 4. This rule creates the vertical green bar for active NESTED links. */
 .sidebar-nav details .active > a::before {
     content: '';
     position: absolute;
@@ -221,18 +250,6 @@ body h2 {
     width: 4px;
     height: 100%;
     background-color: #42b983;
-}
-
-/* 2. This rule ONLY targets the "About" link when it is active */
-.sidebar-nav > ul > li:first-child.active > a {
-    color: #42b983 !important;
-    font-weight: 700 !important;
-}
-
-/* 3. This rule makes the parent section title (e.g., "Privacy") green */
-.sidebar-nav details.active-section > summary {
-    font-weight: 700;
-    color: #42b983;
 }
 
 /* --- Button Styles for App Name (Original) --- */
