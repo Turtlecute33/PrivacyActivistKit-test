@@ -1,5 +1,7 @@
-
-document.addEventListener('DOMContentLoaded', (event) => {
+if (history.scrollRestoration) {
+    history.scrollRestoration = 'manual';
+}
+window.addEventListener('beforeunload', () => {
     window.scrollTo(0, 0);
 });
 
