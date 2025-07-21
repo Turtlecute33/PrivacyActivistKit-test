@@ -1,6 +1,7 @@
 (
     function () {
 
+        // --- Restored Original Sidebar Plugin ---
         function persistSidebar(hook, vm) {
             const storageKey = 'sidebar_collapse_state';
 
@@ -36,39 +37,35 @@
                 window.scrollTo(0, 0);
             });
 
-            // Use event delegation on the sidebar for efficiency
-            const sidebar = document.querySelector('.sidebar-nav');
-            if (sidebar) {
-                sidebar.addEventListener('click', function (event) {
-                    if (event.target.tagName === 'SUMMARY') {
-                        // No need for stopPropagation or setTimeout unless there are specific issues
-                        saveState();
-                    }
-                });
-            }
+            // The original, broader event listener is necessary for state to be saved correctly.
+            document.addEventListener('click', function(event) {
+                const sidebarNav = event.target.closest('.sidebar-nav');
+                if (sidebarNav && event.target.tagName === 'SUMMARY') {
+                    // Using a short timeout ensures the 'open' attribute has been updated before we save the state.
+                    setTimeout(saveState, 100);
+                }
+            }, true);
         }
 
+        // --- Optimized Scroll Plugin (No Changes Needed) ---
         function customScrollPlugin(hook, vm) {
-            // Use event delegation on the document body
             document.body.addEventListener('click', function (e) {
                 const getStartedButton = e.target.closest('.cover-main a.button[href="#/README"]');
                 if (getStartedButton) {
                     e.preventDefault();
                     const mainContent = document.getElementById('main');
                     if (mainContent) {
-                        // Modern, smooth scroll behavior
                         mainContent.scrollIntoView({ behavior: 'smooth' });
                     }
                 }
             });
         }
 
-
+        // --- Optimized Active Link Highlighter (No Changes Needed) ---
         function highlightActiveItems(hook, vm) {
             hook.doneEach(function () {
                 const activeListItem = document.querySelector('.sidebar-nav li.active');
 
-                // Reset previous active section
                 document.querySelectorAll('.sidebar-nav details.active-section').forEach((el) => {
                     el.classList.remove('active-section');
                 });
@@ -80,7 +77,6 @@
                     }
                 }
 
-                // Handle the main "About" link
                 const aboutLi = document.querySelector('.sidebar-nav > ul > li:first-child');
                 if (aboutLi) {
                     if (vm.route.path === '/' || vm.route.path === '/README.md') {
@@ -96,9 +92,9 @@
         window.$docsify = window.$docsify || {};
         window.$docsify.plugins = [].concat(
             window.$docsify.plugins || [],
-            persistSidebar,
-            customScrollPlugin,
-            highlightActiveItems
+            persistSidebar,      // Restored original
+            customScrollPlugin,    // Kept optimized version
+            highlightActiveItems // Kept optimized version
         );
 
     })();
