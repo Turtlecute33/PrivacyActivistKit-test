@@ -1,37 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Privacy Activist Kit</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta name="description" content="A guide for activists on digital self-defense.">
-    <meta name="keywords" content="privacy, activism, security, digital self-defense, online anonymity, secure communication">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <meta property="og:title" content="Privacy Activist Kit">
-    <meta property="og:description" content="A comprehensive guide for activists on digital self-defense and online privacy.">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="_media/logo.png">
-    <meta property="og:url" content="https://privacyactivist.org">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Privacy Activist Kit">
-    <meta name="twitter:description" content="A comprehensive guide for activists on digital self-defense and online privacy.">
-    <meta name="twitter:image" content="_media/logo.png">
+  <meta charset="UTF-8">
+  <title>Home</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+  <!-- Preconnect to Google Fonts for faster font loading -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Preload LCP video assets -->
+  <link rel="preload" href="/_media/turt.webm" as="video" type="video/webm">
+  <link rel="preload" href="/_media/turt.mp4" as="video" type="video/mp4">
+
+  <!-- Load CSS asynchronously to prevent render-blocking -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="custom.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto+Mono|Source+Sans+Pro:300,400,600" media="print" onload="this.media='all'">
+  
+  <!-- Fallback for browsers with JavaScript disabled -->
+  <noscript>
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
     <link rel="stylesheet" href="custom.css">
-    <link rel="preconnect" href="//cdn.jsdelivr.net">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto+Mono|Source+Sans+Pro:300,400,600">
+  </noscript>
 </head>
 <body>
-    <div id="app"></div>
-    <script>
-        window.$docsify = {
-            name: 'Home',
-            coverpage: true,
-            loadSidebar: "_sidebar.md",
-            subMaxLevel: 1,
-            auto2top: true,
-        }
-    </script>
-    <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
-    <script src="custom.js"></script>
+  <div id="app"></div>
+  <script>
+    window.$docsify = {
+      name: 'Home',
+      repo: '',
+      loadSidebar: '_sidebar.md',
+      subMaxLevel: 1,
+      coverpage: true,
+      auto2top: true
+    }
+  </script>
+  <!-- Load scripts with `defer` to prevent render-blocking -->
+  <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js" defer></script>
+  <script src="custom.js" defer></script>
 </body>
 </html>
