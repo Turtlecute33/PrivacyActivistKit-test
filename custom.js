@@ -75,32 +75,48 @@ function customScrollPlugin(hook, vm) {
     });
 }
 
-// Plugin to highlight the active section in the sidebar
+// --- DIAGNOSTIC HIGHLIGHT PLUGIN ---
 function highlightActiveSection(hook, vm) {
     hook.doneEach(function() {
-        // First, remove the active-section class from all details elements
-        document.querySelectorAll('.sidebar-nav details').forEach(details => {
-            details.classList.remove('active-section');
-        });
+        // --- DIAGNOSTIC STEP 1: Display the current route path ---
+        let debugDiv = document.getElementById('route-debugger');
+        if (!debugDiv) {
+            debugDiv = document.createElement('div');
+            debugDiv.id = 'route-debugger';
+            debugDiv.style.position = 'fixed';
+            debugDiv.style.top = '10px';
+            debugDiv.style.right = '10px';
+            debugDiv.style.background = 'white';
+            debugDiv.style.border = '2px solid red';
+            debugDiv.style.padding = '10px';
+            debugDiv.style.zIndex = '9999';
+            document.body.appendChild(debugDiv);
+        }
+        debugDiv.innerHTML = `Current Path: <code>${vm.route.path}</code>`;
 
-        // Find the active link
-        const activeLink = document.querySelector('.sidebar-nav .active');
-        if (activeLink) {
-            // Find the closest parent 'details' element
-            const parentDetails = activeLink.closest('details');
-            if (parentDetails) {
-                // Add the class to the parent 'details' element
-                parentDetails.classList.add('active-section');
+        // --- DIAGNOSTIC STEP 2: Try to force the link green ---
+        // Try to find the "About" link specifically
+        const aboutLink = document.querySelector('.sidebar-nav a[href="#/README.md"]');
+        if (aboutLink) {
+            // If the current path is the homepage, force it green
+            if (vm.route.path === '/README.md' || vm.route.path === '/') {
+                 aboutLink.style.color = 'green';
+                 aboutLink.style.fontWeight = 'bold';
+                 debugDiv.innerHTML += '<br>SUCCESS: Found "About" link and path matches.';
+            } else {
+                 // If we are on another page, reset the style
+                 aboutLink.style.color = '';
+                 aboutLink.style.fontWeight = '';
             }
         }
     });
 }
 
-// Add both plugins to Docsify's plugin array
+
+// Add all plugins to Docsify's plugin array
 window.$docsify.plugins = [].concat(
     window.$docsify.plugins || [],
     persistSidebar,
     customScrollPlugin,
     highlightActiveSection
 );
-

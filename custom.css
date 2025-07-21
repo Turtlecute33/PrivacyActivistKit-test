@@ -133,7 +133,8 @@ body h2 {
     font-size: 1em; /* restore to default */
 }
 
-.sidebar-nav>ul>li:first-child>a {
+/* This rule targets the 'About' link and keeps it grey by default */
+.sidebar-nav > ul > li:first-child > a {
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -146,6 +147,8 @@ body h2 {
     font-size: 1em; /* restore to default */
     position: relative;
 }
+
+
 .sidebar-nav>ul>li:first-child>a::before {
     content: '›';
     font-size: 1.5em;
@@ -219,7 +222,7 @@ body h2 {
     background-color: rgba(66, 185, 131, 0.1);
     color: #42b983;
 }
-.sidebar-nav .active>a {
+.sidebar-nav details .active > a {
     color: #42b983 !important;
     font-weight: 700;
     border-radius: 0;
@@ -259,3 +262,12 @@ body h2 {
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
+
+
+
+.sidebar-nav > ul > li:first-child.active-link > a {
+    color: #42b983 !important;
+    font-weight: 700 !important;
+}
+
+
