@@ -9,31 +9,24 @@ body {
     font-size: var(--base-font-size);
     min-height: 100%;
 }
-
-
 /* Make <h1> in main content 10% larger */
 body main .markdown-section h1,
 body .markdown-section h1,
 body h1 {
     font-size: 2.2em; /* 10% larger than default 2em */
 }
-
-
-
 /* Make <h2> in main content 12% bigger */
 body main .markdown-section h2,
 body .markdown-section h2,
 body h2 {
     font-size: 1.68em; /* 12% bigger than default 1.5em */
 }
-
 /* Increase font size for larger screens */
 @media screen and (min-width: 768px) {
     :root {
         --base-font-size: 18px;
     }
 }
-
 /* Further increase font size for very large screens */
 @media screen and (min-width: 1200px) {
     :root {
@@ -71,7 +64,7 @@ body h2 {
     left: 0 !important;
     bottom: auto;
     width: 40px !important;
-    height: 40px !import ant;
+    height: 40px !important;
     padding: 8px;
     margin: 10px;
     border-radius: 50%;
@@ -127,12 +120,9 @@ body h2 {
 .sidebar-nav>ul>li {
     margin-bottom: 5px;
 }
-
-/* Increase size for main section items in sidebar */
 .sidebar-nav>ul>li>details>summary {
     font-size: 1em; /* restore to default */
 }
-
 /* This rule targets the 'About' link and keeps it grey by default */
 .sidebar-nav > ul > li:first-child > a {
     display: flex;
@@ -147,8 +137,6 @@ body h2 {
     font-size: 1em; /* restore to default */
     position: relative;
 }
-
-
 .sidebar-nav>ul>li:first-child>a::before {
     content: '›';
     font-size: 1.5em;
@@ -195,11 +183,6 @@ body h2 {
 .sidebar-nav details[open]>summary {
     font-weight: 700;
 }
-
-.sidebar-nav details.active-section>summary {
-    font-weight: 700;
-    color: #42b983;
-}
 .sidebar-nav details>ul {
     list-style-type: none;
     padding-left: 20px;
@@ -222,15 +205,15 @@ body h2 {
     background-color: rgba(66, 185, 131, 0.1);
     color: #42b983;
 }
+
+/* --- THE ONLY FIX YOU NEED --- */
+
+/* 1. This rule makes any NESTED link active AND adds the green bar */
 .sidebar-nav details .active > a {
     color: #42b983 !important;
     font-weight: 700;
-    border-radius: 0;
-    border: none !important;
-    outline: none !important;
-    box-shadow: none !important;
 }
-.sidebar-nav .active>a::before {
+.sidebar-nav details .active > a::before {
     content: '';
     position: absolute;
     top: 0;
@@ -238,10 +221,21 @@ body h2 {
     width: 4px;
     height: 100%;
     background-color: #42b983;
-    border-radius: 0;
-    transform: none;
 }
-/* --- Button Styles for App Name --- */
+
+/* 2. This rule ONLY targets the "About" link when it is active */
+.sidebar-nav > ul > li:first-child.active > a {
+    color: #42b983 !important;
+    font-weight: 700 !important;
+}
+
+/* 3. This rule makes the parent section title (e.g., "Privacy") green */
+.sidebar-nav details.active-section > summary {
+    font-weight: 700;
+    color: #42b983;
+}
+
+/* --- Button Styles for App Name (Original) --- */
 .app-name-link {
     display: inline-block;
     padding: 12px 20px;
@@ -254,7 +248,6 @@ body h2 {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: all 0.2s ease-in-out;
 }
-
 .app-name-link:hover {
     background-color: #42b983;
     color: white;
@@ -262,12 +255,3 @@ body h2 {
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
-
-
-
-.sidebar-nav > ul > li:first-child.active-link > a {
-    color: #42b983 !important;
-    font-weight: 700 !important;
-}
-
-

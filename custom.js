@@ -33,80 +33,61 @@ function persistSidebar(hook, vm) {
         restoreState();
     });
 
-    // Add a more intelligent click handler
     document.addEventListener('click', function(event) {
         const sidebarNav = event.target.closest('.sidebar-nav');
-        // Check if the click is inside the sidebar
-        if (sidebarNav) {
-            // Check if the click was specifically on a SUMMARY tag (the expand/collapse button)
-            if (event.target.tagName === 'SUMMARY') {
-                // Stop the click from bubbling up and triggering Docsify's sidebar close behavior
-                event.stopPropagation();
-                // Save the open/close state after a tiny delay to ensure the UI has updated
-                setTimeout(saveState, 100);
-            }
-            // For any other click inside the sidebar (e.g., on an <a> link),
-            // we do nothing, allowing the event to bubble up and let Docsify close the sidebar as intended.
+        if (sidebarNav && event.target.tagName === 'SUMMARY') {
+            event.stopPropagation();
+            setTimeout(saveState, 100);
         }
-    }, true); // Use capture phase to catch the event early
+    }, true);
 }
 
-// --- SIMPLIFIED SCROLL PLUGIN ---
+// Plugin for smooth scrolling the "Get Started" button
 function customScrollPlugin(hook, vm) {
     document.body.addEventListener('click', function(e) {
-        const target = e.target;
-
-        // This plugin now ONLY handles the special case for the "Get Started" button.
-        // We let Docsify and the browser handle all other navigation links,
-        // including the top-left title, to ensure you always go to the correct page.
-
-        if (target.matches('.cover-main a.button[href="#/README"]')) {
-            // Prevent the default link click
+        if (e.target.matches('.cover-main a.button[href="#/README"]')) {
             e.preventDefault();
-            // Find the main content area
             const mainContent = document.getElementById('main');
-            // Scroll it into view smoothly
             if (mainContent) {
-                mainContent.scrollIntoView({
-                    behavior: 'smooth'
-                });
+                mainContent.scrollIntoView({ behavior: 'smooth' });
             }
         }
     });
 }
 
-// --- DIAGNOSTIC HIGHLIGHT PLUGIN ---
-function highlightActiveSection(hook, vm) {
+// --- THE FINAL, CORRECTED PLUGIN ---
+// This single, clean plugin correctly highlights the active link's PARENT section
+// AND correctly adds the .active class to the "About" link.
+function highlightActiveItems(hook, vm) {
     hook.doneEach(function() {
-        // --- DIAGNOSTIC STEP 1: Display the current route path ---
-        let debugDiv = document.getElementById('route-debugger');
-        if (!debugDiv) {
-            debugDiv = document.createElement('div');
-            debugDiv.id = 'route-debugger';
-            debugDiv.style.position = 'fixed';
-            debugDiv.style.top = '10px';
-            debugDiv.style.right = '10px';
-            debugDiv.style.background = 'white';
-            debugDiv.style.border = '2px solid red';
-            debugDiv.style.padding = '10px';
-            debugDiv.style.zIndex = '9999';
-            document.body.appendChild(debugDiv);
-        }
-        debugDiv.innerHTML = `Current Path: <code>${vm.route.path}</code>`;
+        // ---- Handle Parent Section Highlighting ----
+        // First, reset the state by removing our custom class from all sections
+        document.querySelectorAll('.sidebar-nav details.active-section').forEach((el) => {
+            el.classList.remove('active-section');
+        });
 
-        // --- DIAGNOSTIC STEP 2: Try to force the link green ---
-        // Try to find the "About" link specifically
-        const aboutLink = document.querySelector('.sidebar-nav a[href="#/README.md"]');
-        if (aboutLink) {
-            // If the current path is the homepage, force it green
-            if (vm.route.path === '/README.md' || vm.route.path === '/') {
-                 aboutLink.style.color = 'green';
-                 aboutLink.style.fontWeight = 'bold';
-                 debugDiv.innerHTML += '<br>SUCCESS: Found "About" link and path matches.';
+        // Find the currently active link's list item (<li>), which Docsify marks with .active
+        const activeListItem = document.querySelector('.sidebar-nav li.active');
+
+        if (activeListItem) {
+            // Find the closest parent <details> tag (the collapsible section)
+            const parentDetails = activeListItem.closest('details');
+
+            if (parentDetails) {
+                // Add our custom class to the parent section.
+                // The CSS in `custom.css` will then style the summary.
+                parentDetails.classList.add('active-section');
+            }
+        }
+
+        // ---- Handle "About" Link Highlighting ----
+        const aboutLi = document.querySelector('.sidebar-nav > ul > li:first-child');
+        if (aboutLi) {
+            // This now correctly adds the .active class, which matches the CSS.
+            if (vm.route.path === '/' || vm.route.path === '/README.md') {
+                aboutLi.classList.add('active');
             } else {
-                 // If we are on another page, reset the style
-                 aboutLink.style.color = '';
-                 aboutLink.style.fontWeight = '';
+                aboutLi.classList.remove('active');
             }
         }
     });
@@ -118,5 +99,5 @@ window.$docsify.plugins = [].concat(
     window.$docsify.plugins || [],
     persistSidebar,
     customScrollPlugin,
-    highlightActiveSection
+    highlightActiveItems
 );
