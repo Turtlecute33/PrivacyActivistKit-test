@@ -1,22 +1,19 @@
 (
     function () {
 
-        // --- Sidebar Plugin with definitive Mobile Fix ---
+        // --- Sidebar Plugin with Correct, Targeted Event Handling ---
         function persistSidebar(hook, vm) {
             const storageKey = 'sidebar_collapse_state';
 
             function saveState() {
                 const state = {};
-                // Use a slight delay to ensure the DOM has updated before we read it.
-                setTimeout(() => {
-                    document.querySelectorAll('.sidebar-nav details').forEach((details) => {
-                        const summary = details.querySelector('summary');
-                        if (summary) {
-                            state[summary.innerText] = details.hasAttribute('open');
-                        }
-                    });
-                    sessionStorage.setItem(storageKey, JSON.stringify(state));
-                }, 50); // A small delay is sufficient
+                document.querySelectorAll('.sidebar-nav details').forEach((details) => {
+                    const summary = details.querySelector('summary');
+                    if (summary) {
+                        state[summary.innerText] = details.hasAttribute('open');
+                    }
+                });
+                sessionStorage.setItem(storageKey, JSON.stringify(state));
             }
 
             function restoreState() {
@@ -25,43 +22,40 @@
                     document.querySelectorAll('.sidebar-nav details').forEach(details => {
                         const summary = details.querySelector('summary');
                         if (summary && savedState[summary.innerText] !== undefined) {
-                            if (savedState[summary.innerText]) {
-                                details.setAttribute('open', '');
-                            } else {
-                                details.removeAttribute('open');
-                            }
+                            details.toggleAttribute('open', savedState[summary.innerText]);
                         }
                     });
                 }
             }
 
+            // This hook runs after Docsify has finished rendering the page.
             hook.doneEach(() => {
+                const sidebarNav = document.querySelector('.sidebar-nav');
+
+                // Restore the state first.
                 restoreState();
+
+                // Attach a single, specific event listener to the sidebar navigation.
+                // This is more efficient and reliable than a general document listener.
+                if (sidebarNav && !sidebarNav.hasAttribute('data-listener-added')) {
+                    sidebarNav.addEventListener('click', function(event) {
+                        // Check if the click was on a SUMMARY tag (expandable section).
+                        const summary = event.target.closest('summary');
+                        if (summary) {
+                            // **THE RELIABLE FIX**
+                            // Stop this specific click from bubbling up to Docsify's general click handlers.
+                            event.stopPropagation();
+                            
+                            // Save the state after a very brief delay to allow the 'open' attribute to update.
+                            setTimeout(saveState, 100);
+                        }
+                    });
+                    // Mark the element so we don't add the listener more than once.
+                    sidebarNav.setAttribute('data-listener-added', 'true');
+                }
+                // Original scroll to top functionality
                 window.scrollTo(0, 0);
             });
-
-            // Listen during the capture phase to intercept the click before Docsify does.
-            document.addEventListener('click', function(event) {
-                const summary = event.target.closest('.sidebar-nav summary');
-
-                if (summary) {
-                    // *** THE DEFINITIVE FIX ***
-                    // 1. Stop the browser's default action and prevent the event from reaching other listeners.
-                    event.preventDefault();
-                    event.stopPropagation();
-
-                    // 2. Manually replicate the default behavior: toggle the parent <details> element.
-                    const details = summary.parentElement;
-                    if (details.hasAttribute('open')) {
-                        details.removeAttribute('open');
-                    } else {
-                        details.setAttribute('open', '');
-                    }
-
-                    // 3. Save the new state.
-                    saveState();
-                }
-            }, true); // `true` for capture phase is critical here.
         }
 
         // --- Optimized Scroll Plugin (No Changes Needed) ---
@@ -102,7 +96,7 @@
         window.$docsify = window.$docsify || {};
         window.$docsify.plugins = [].concat(
             window.$docsify.plugins || [],
-            persistSidebar,      // Now includes the definitive mobile fix
+            persistSidebar,      // Now with the correct, targeted fix
             customScrollPlugin,
             highlightActiveItems
         );
