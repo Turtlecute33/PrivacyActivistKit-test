@@ -1,10 +1,3 @@
-if (history.scrollRestoration) {
-    history.scrollRestoration = 'manual';
-}
-window.addEventListener('beforeunload', () => {
-    window.scrollTo(0, 0);
-});
-
 // Plugin to persist sidebar collapse state
 function persistSidebar(hook, vm) {
     const storageKey = 'sidebar_collapse_state';
@@ -38,6 +31,7 @@ function persistSidebar(hook, vm) {
 
     hook.doneEach(() => {
         restoreState();
+        window.scrollTo(0, 0);
     });
 
     document.addEventListener('click', function(event) {
