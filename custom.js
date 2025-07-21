@@ -1,19 +1,22 @@
 (
     function () {
 
-        // --- Sidebar Plugin with Mobile Fix ---
+        // --- Sidebar Plugin with definitive Mobile Fix ---
         function persistSidebar(hook, vm) {
             const storageKey = 'sidebar_collapse_state';
 
             function saveState() {
                 const state = {};
-                document.querySelectorAll('.sidebar-nav details').forEach((details) => {
-                    const summary = details.querySelector('summary');
-                    if (summary) {
-                        state[summary.innerText] = details.hasAttribute('open');
-                    }
-                });
-                sessionStorage.setItem(storageKey, JSON.stringify(state));
+                // Use a slight delay to ensure the DOM has updated before we read it.
+                setTimeout(() => {
+                    document.querySelectorAll('.sidebar-nav details').forEach((details) => {
+                        const summary = details.querySelector('summary');
+                        if (summary) {
+                            state[summary.innerText] = details.hasAttribute('open');
+                        }
+                    });
+                    sessionStorage.setItem(storageKey, JSON.stringify(state));
+                }, 50); // A small delay is sufficient
             }
 
             function restoreState() {
@@ -37,18 +40,28 @@
                 window.scrollTo(0, 0);
             });
 
-            // The original, broader event listener is necessary for state to be saved correctly.
+            // Listen during the capture phase to intercept the click before Docsify does.
             document.addEventListener('click', function(event) {
-                const sidebarNav = event.target.closest('.sidebar-nav');
-                if (sidebarNav && event.target.tagName === 'SUMMARY') {
-                    // *** THIS IS THE FIX ***
-                    // Prevents the click from bubbling up and closing the mobile sidebar.
+                const summary = event.target.closest('.sidebar-nav summary');
+
+                if (summary) {
+                    // *** THE DEFINITIVE FIX ***
+                    // 1. Stop the browser's default action and prevent the event from reaching other listeners.
+                    event.preventDefault();
                     event.stopPropagation();
 
-                    // Using a short timeout ensures the 'open' attribute has been updated before we save the state.
-                    setTimeout(saveState, 100);
+                    // 2. Manually replicate the default behavior: toggle the parent <details> element.
+                    const details = summary.parentElement;
+                    if (details.hasAttribute('open')) {
+                        details.removeAttribute('open');
+                    } else {
+                        details.setAttribute('open', '');
+                    }
+
+                    // 3. Save the new state.
+                    saveState();
                 }
-            }, true);
+            }, true); // `true` for capture phase is critical here.
         }
 
         // --- Optimized Scroll Plugin (No Changes Needed) ---
@@ -69,25 +82,18 @@
         function highlightActiveItems(hook, vm) {
             hook.doneEach(function () {
                 const activeListItem = document.querySelector('.sidebar-nav li.active');
-
                 document.querySelectorAll('.sidebar-nav details.active-section').forEach((el) => {
                     el.classList.remove('active-section');
                 });
-
                 if (activeListItem) {
                     const parentDetails = activeListItem.closest('details');
                     if (parentDetails) {
                         parentDetails.classList.add('active-section');
                     }
                 }
-
                 const aboutLi = document.querySelector('.sidebar-nav > ul > li:first-child');
                 if (aboutLi) {
-                    if (vm.route.path === '/' || vm.route.path === '/README.md') {
-                        aboutLi.classList.add('active');
-                    } else {
-                        aboutLi.classList.remove('active');
-                    }
+                    aboutLi.classList.toggle('active', vm.route.path === '/' || vm.route.path === '/README.md');
                 }
             });
         }
@@ -96,7 +102,7 @@
         window.$docsify = window.$docsify || {};
         window.$docsify.plugins = [].concat(
             window.$docsify.plugins || [],
-            persistSidebar,      // Now includes the mobile fix
+            persistSidebar,      // Now includes the definitive mobile fix
             customScrollPlugin,
             highlightActiveItems
         );
