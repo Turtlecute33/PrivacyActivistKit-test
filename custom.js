@@ -75,9 +75,32 @@ function customScrollPlugin(hook, vm) {
     });
 }
 
+// Plugin to highlight the active section in the sidebar
+function highlightActiveSection(hook, vm) {
+    hook.doneEach(function() {
+        // First, remove the active-section class from all details elements
+        document.querySelectorAll('.sidebar-nav details').forEach(details => {
+            details.classList.remove('active-section');
+        });
+
+        // Find the active link
+        const activeLink = document.querySelector('.sidebar-nav .active');
+        if (activeLink) {
+            // Find the closest parent 'details' element
+            const parentDetails = activeLink.closest('details');
+            if (parentDetails) {
+                // Add the class to the parent 'details' element
+                parentDetails.classList.add('active-section');
+            }
+        }
+    });
+}
+
 // Add both plugins to Docsify's plugin array
 window.$docsify.plugins = [].concat(
     window.$docsify.plugins || [],
     persistSidebar,
-    customScrollPlugin
+    customScrollPlugin,
+    highlightActiveSection
 );
+
