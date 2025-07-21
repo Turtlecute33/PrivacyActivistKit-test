@@ -1,5 +1,8 @@
 <div class="cover-main">
-    <img src="_media/turt.gif" alt="logo" width="170">
+    <video autoplay loop muted playsinline width="170">
+        <source src="_media/turt.webm" type="video/webm">
+        <source src="_media/turt.mp4" type="video/mp4">
+    </video>
     <h1>Privacy Activist Kit</h1>
     <p>A complete guide to digital self-defense for activists, journalists, and everyone else.</p>
     <p>
