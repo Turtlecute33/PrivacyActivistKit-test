@@ -1,7 +1,7 @@
 (
     function () {
 
-        // --- Restored Original Sidebar Plugin ---
+        // --- Sidebar Plugin with Mobile Fix ---
         function persistSidebar(hook, vm) {
             const storageKey = 'sidebar_collapse_state';
 
@@ -41,6 +41,10 @@
             document.addEventListener('click', function(event) {
                 const sidebarNav = event.target.closest('.sidebar-nav');
                 if (sidebarNav && event.target.tagName === 'SUMMARY') {
+                    // *** THIS IS THE FIX ***
+                    // Prevents the click from bubbling up and closing the mobile sidebar.
+                    event.stopPropagation();
+
                     // Using a short timeout ensures the 'open' attribute has been updated before we save the state.
                     setTimeout(saveState, 100);
                 }
@@ -92,9 +96,9 @@
         window.$docsify = window.$docsify || {};
         window.$docsify.plugins = [].concat(
             window.$docsify.plugins || [],
-            persistSidebar,      // Restored original
-            customScrollPlugin,    // Kept optimized version
-            highlightActiveItems // Kept optimized version
+            persistSidebar,      // Now includes the mobile fix
+            customScrollPlugin,
+            highlightActiveItems
         );
 
     })();
