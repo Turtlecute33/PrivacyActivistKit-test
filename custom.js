@@ -1,3 +1,8 @@
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    window.scrollTo(0, 0);
+});
+
 // Plugin to persist sidebar collapse state
 function persistSidebar(hook, vm) {
     const storageKey = 'sidebar_collapse_state';
