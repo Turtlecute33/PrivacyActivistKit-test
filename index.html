@@ -1,45 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Home</title>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <meta name="description" content="Description">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="description" content="Description">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <link rel="icon" href="_media/favicon.ico" type="image/x-icon">
 
-  <!-- Preconnect to Google Fonts for faster font loading -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Preconnect to Google Fonts for faster font loading -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <!-- Preload LCP video assets -->
-  <link rel="preload" href="/_media/turt.webm" as="video" type="video/webm">
-  <link rel="preload" href="/_media/turt.mp4" as="video" type="video/mp4">
+    <!-- Preload LCP video assets -->
+    <link rel="preload" href="/_media/turt.webm" as="video" type="video/webm">
+    <link rel="preload" href="/_media/turt.mp4" as="video" type="video/mp4">
 
-  <!-- Load CSS asynchronously to prevent render-blocking -->
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css" media="print" onload="this.media='all'">
-  <link rel="stylesheet" href="custom.css" media="print" onload="this.media='all'">
-  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto+Mono|Source+Sans+Pro:300,400,600" media="print" onload="this.media='all'">
-  
-  <!-- Fallback for browsers with JavaScript disabled -->
-  <noscript>
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
-    <link rel="stylesheet" href="custom.css">
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto+Mono|Source+Sans+Pro:300,400,600">
-  </noscript>
+    <!-- Load CSS asynchronously to prevent render-blocking -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="custom.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto+Mono|Source+Sans+Pro:300,400,600" media="print" onload="this.media='all'">
+
+    <!-- Fallback for browsers with JavaScript disabled -->
+    <noscript>
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+        <link rel="stylesheet" href="custom.css">
+        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto+Mono|Source+Sans+Pro:300,400,600">
+    </noscript>
 </head>
+
 <body>
-  <div id="app"></div>
-  <script>
-    window.$docsify = {
-      name: 'Home',
-      repo: '',
-      loadSidebar: '_sidebar.md',
-      subMaxLevel: 1,
-      coverpage: true,
-      auto2top: true
-    }
-  </script>
-  <!-- Load scripts with `defer` to prevent render-blocking -->
-  <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js" defer></script>
-  <script src="custom.js" defer></script>
+    <div id="app"></div>
+    <script>
+        window.$docsify = {
+            name: 'Home',
+            repo: '',
+            loadSidebar: '_sidebar.md',
+            subMaxLevel: 1,
+            coverpage: true,
+            auto2top: true
+        }
+    </script>
+    <!-- Load scripts with `defer` to prevent render-blocking -->
+    <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js" defer></script>
+    <script src="custom.js" defer></script>
 </body>
+
 </html>

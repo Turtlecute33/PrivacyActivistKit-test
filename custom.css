@@ -68,7 +68,7 @@ body h2 {
     padding: 8px;
     margin: 10px;
     border-radius: 50%;
-    background-color: #42b983;
+    background-color: #42b983 !important; /* Force green background */
     border: 1px solid #36a372;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
     z-index: 99 !important;
@@ -79,7 +79,9 @@ body h2 {
     box-sizing: border-box;
     position: fixed !important;
     overflow: hidden;
+    transition: transform 0.3s ease-in-out; /* Smooth rotation */
 }
+
 .sidebar-toggle span {
     display: block;
     width: 18px;
@@ -95,11 +97,7 @@ body h2 {
 .sidebar-toggle span+span {
     margin-top: 3px;
 }
-.sidebar-toggle.close {
-    width: 40px !important;
-    height: 40px !important;
-    transform: none !important;
-}
+
 @media screen and (max-width: 768px) {
     .sidebar-toggle {
         position: fixed !important;
@@ -114,6 +112,9 @@ body h2 {
     }
 }
 /* --- Modern Sidebar --- */
+.sidebar {
+    background-color: white;
+}
 .sidebar-nav {
     padding-top: 10px;
 }
@@ -214,7 +215,7 @@ body h2 {
 .sidebar-nav > ul > li:first-child.active > a {
     background: transparent !important;
     border: none !important;
-    box-shadow: none !important;
+    box-shadow: none !importan_t;
     outline: none !important;
 }
 
