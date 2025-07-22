@@ -13,29 +13,37 @@
             sessionStorage.setItem(storageKey, JSON.stringify(state));
         }
         function restoreState() {
-            const savedState = JSON.parse(sessionStorage.getItem(storageKey));
-            if (savedState) {
-                document.querySelectorAll('.sidebar-nav details').forEach(details => {
-                    const summary = details.querySelector('summary');
-                    if (summary && savedState[summary.innerText] !== undefined) {
-                        details.toggleAttribute('open', savedState[summary.innerText]);
-                    }
-                });
-            }
+    try {
+        const savedState = JSON.parse(sessionStorage.getItem(storageKey));
+        if (savedState) {
+            document.querySelectorAll('.sidebar-nav details').forEach(details => {
+                const summary = details.querySelector('summary');
+                if (summary && savedState[summary.innerText] !== undefined) {
+                    details.toggleAttribute('open', savedState[summary.innerText]);
+                }
+            });
         }
+    } catch (error) {
+        console.warn('Could not restore sidebar state:', error);
+    }
+}
         hook.doneEach(() => {
             const sidebarNav = document.querySelector('.sidebar-nav');
             restoreState();
             if (sidebarNav && !sidebarNav.hasAttribute('data-listener-added')) {
-                sidebarNav.addEventListener('click', function(event) {
-                    const summary = event.target.closest('summary');
-                    if (summary) {
-                        event.stopPropagation();
-                        setTimeout(saveState, 100);
-                    }
-                });
-                sidebarNav.setAttribute('data-listener-added', 'true');
-            }
+    sidebarNav.addEventListener('click', function(event) {
+        const summary = event.target.closest('summary');
+        if (summary) {
+            event.stopPropagation();
+            // Use requestAnimationFrame for better performance
+            requestAnimationFrame(() => {
+                setTimeout(saveState, 50); // Reduced timeout
+            });
+        }
+    }, { passive: false }); // Add passive option for better performance
+    
+    sidebarNav.setAttribute('data-listener-added', 'true');
+}
             window.scrollTo(0, 0);
         });
     }
@@ -78,26 +86,29 @@
     );
 })();
 
-document.addEventListener('DOMContentLoaded', function() {
+// Improved hamburger menu handler with better timing
+function initializeSidebarToggle() {
     var sidebarToggle = document.querySelector('.sidebar-toggle');
-
-    if (sidebarToggle) {
+    
+    if (sidebarToggle && !sidebarToggle.hasAttribute('data-initialized')) {
         sidebarToggle.addEventListener('click', function(e) {
-            // This stops docsify's script from interfering.
             e.preventDefault();
             e.stopPropagation();
-
-            var body = document.body;
-            // Manually toggle the 'close' class on the body
-            body.classList.toggle('close');
             
-            // Also toggle an 'open' class on the button itself for CSS to use
+            var body = document.body;
+            body.classList.toggle('close');
             sidebarToggle.classList.toggle('open');
         });
-
-        // Set initial state on load
+        
+        // Set initial state
         if (!document.body.classList.contains('close')) {
             sidebarToggle.classList.add('open');
         }
+        
+        sidebarToggle.setAttribute('data-initialized', 'true');
     }
-});
+}
+
+// Try to initialize immediately and also on DOM ready
+initializeSidebarToggle();
+document.addEventListener('DOMContentLoaded', initializeSidebarToggle);

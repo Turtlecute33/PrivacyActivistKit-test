@@ -13,8 +13,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <!-- Preload LCP video assets -->
-    <link rel="preload" href="/_media/turt.webm" as="video" type="video/webm">
-    <link rel="preload" href="/_media/turt.mp4" as="video" type="video/mp4">
+    <link rel="preload" href="_media/turt.webm" as="video" type="video/webm">
+    <link rel="preload" href="_media/turt.mp4" as="video" type="video/mp4">
 
     <!-- Load CSS asynchronously to prevent render-blocking -->
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css" media="print" onload="this.media='all'">
@@ -44,6 +44,17 @@
     <!-- Load scripts with `defer` to prevent render-blocking -->
     <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js" defer></script>
     <script src="custom.js" defer></script>
+<script>
+// Handle video preload errors gracefully
+document.addEventListener('DOMContentLoaded', function() {
+    const preloadLinks = document.querySelectorAll('link[rel="preload"][as="video"]');
+    preloadLinks.forEach(link => {
+        link.addEventListener('error', function() {
+            console.warn('Failed to preload video:', link.href);
+        });
+    });
+});
+</script>
 </body>
 
 </html>
