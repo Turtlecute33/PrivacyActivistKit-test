@@ -3,7 +3,7 @@ html {
     scroll-behavior: smooth;
 }
 :root {
-    --base-font-size: 16px;
+    --base-font-size: 18px;
 }
 body {
     font-size: var(--base-font-size);
@@ -19,13 +19,13 @@ body {
 /* Increase font size for larger screens */
 @media screen and (min-width: 768px) {
     :root {
-        --base-font-size: 18px;
+        --base-font-size: 17px;
     }
 }
 /* Further increase font size for very large screens */
 @media screen and (min-width: 1200px) {
     :root {
-        --base-font-size: 20px;
+        --base-font-size: 19px;
     }
 }
 .sidebar-nav {
@@ -63,7 +63,7 @@ body {
     height: 50px !important;
     padding: 10px;
     border-radius: 50%;
-    background-color: #42b983 !important; /* Force green background */
+    background-color: #42b983; /* Force green background */
     border: 1px solid #36a372;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
     z-index: 999 !important;
@@ -71,6 +71,11 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+.sidebar-toggle.active {
+    background-color: #42b983;
+}
+
     box-sizing: border-box;
     overflow: hidden;
 }
