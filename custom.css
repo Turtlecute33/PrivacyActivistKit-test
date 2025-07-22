@@ -82,6 +82,16 @@ body h2 {
     transition: transform 0.3s ease-in-out; /* Smooth rotation */
 }
 
+/* When the hamburger has the 'open' class, rotate it. */
+.sidebar-toggle.open {
+    transform: rotate(180deg);
+}
+
+/* When it does not have the 'open' class, return to normal. */
+.sidebar-toggle {
+    transform: rotate(0deg);
+}
+
 .sidebar-toggle span {
     display: block;
     width: 18px;
