@@ -59,9 +59,9 @@ body {
     top: 14px !important;
     left: 14px !important;
     bottom: auto;
-    width: 40px !important;
-    height: 40px !important;
-    padding: 8px;
+    width: 50px !important;
+    height: 50px !important;
+    padding: 10px;
     border-radius: 50%;
     background-color: #42b983 !important; /* Force green background */
     border: 1px solid #36a372;
@@ -77,8 +77,8 @@ body {
 
 .sidebar-toggle span {
     display: block;
-    width: 18px;
-    height: 3px;
+    width: 22px;
+    height: 4px;
     background-color: white;
     border-radius: 2px;
     transition: all 0.3s ease-in-out;
@@ -88,7 +88,7 @@ body {
     z-index: 1;
 }
 .sidebar-toggle span+span {
-    margin-top: 3px;
+    margin-top: 4px;
 }
 
 @media screen and (max-width: 768px) {
@@ -271,12 +271,12 @@ body {
     .sidebar-toggle {
         top: 7px !important;
         left: 7px !important;
-        width: 35px !important;
-        height: 35px !important;
+        width: 44px !important;
+        height: 44px !important;
     }
     
     .sidebar-toggle span {
-        width: 15px;
-        height: 2px;
+        width: 19px;
+        height: 3px;
     }
 }
